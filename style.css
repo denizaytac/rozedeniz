@@ -250,59 +250,51 @@ section {
 }
 
 .timeline-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 40px;
-    max-width: 900px;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    max-width: 700px;
     margin: 0 auto;
+    position: relative;
+}
+
+.timeline-grid::before {
+    content: '';
+    position: absolute;
+    top: 20px;
+    bottom: 20px;
+    left: 30px;
+    width: 2px;
+    background-color: var(--smoke);
 }
 
 .timeline-item {
-    text-align: center;
-    padding: 2.25rem 1.75rem;
-    background: var(--bg-white);
-    border-radius: 16px;
-    box-shadow:
-        0 1px 3px rgba(0, 0, 0, 0.03),
-        0 4px 12px rgba(0, 0, 0, 0.04),
-        0 8px 24px rgba(0, 0, 0, 0.05);
-    border: 1px solid rgba(0, 0, 0, 0.04);
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    text-align: left;
+    padding: 1rem 0 1rem 70px;
     position: relative;
-    overflow: hidden;
 }
 
 .timeline-item::before {
     content: '';
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 3px;
-    background: linear-gradient(90deg, var(--text-dark), var(--text-light));
-    transform: scaleX(0);
-    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.timeline-item:hover {
-    transform: translateY(-8px);
-    box-shadow:
-        0 4px 8px rgba(0, 0, 0, 0.04),
-        0 12px 32px rgba(0, 0, 0, 0.08),
-        0 24px 48px rgba(0, 0, 0, 0.12);
-}
-
-.timeline-item:hover::before {
-    transform: scaleX(1);
+    left: 23px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
 }
 
 .timeline-time {
-    font-size: clamp(1.75rem, 4vw, 2.25rem);
-    font-family: 'Cormorant Garamond', serif;
-    color: var(--primary-color);
-    margin-bottom: 0.75rem;
-    font-weight: 500;
+    font-size: 1.25rem;
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    color: var(--text-dark);
+    font-weight: 600;
     letter-spacing: 0.02em;
+    display: inline-block;
+    margin-right: 1rem;
 }
 
 .timeline-event {
@@ -310,6 +302,7 @@ section {
     color: var(--text-dark);
     font-weight: 500;
     letter-spacing: 0.01em;
+    display: inline-block;
 }
 
 /* FAQ Section */
@@ -419,11 +412,6 @@ footer p {
     .language-switcher {
         top: 15px;
         right: 15px;
-    }
-
-
-    .timeline-grid {
-        grid-template-columns: 1fr;
     }
 
     .faq-question {
