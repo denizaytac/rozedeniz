@@ -1,4 +1,4 @@
-# Roza & Deniz - Hochzeitswebseite
+# Roze & Deniz - Hochzeitswebseite
 
 Eine moderne, dreisprachige Hochzeitswebseite im "Sex and the City"-Stil.
 
@@ -32,7 +32,7 @@ Einfach die `index.html` Datei in einem Browser öffnen.
 
 <!-- NACHHER -->
 <div class="hero-image-placeholder">
-    <img src="wedding-photo.jpg" alt="Roza & Deniz">
+    <img src="wedding-photo.jpg" alt="Roze & Deniz">
 </div>
 ```
 
@@ -88,4 +88,4 @@ Bearbeitet die FAQ-Items in `index.html` und die entsprechenden Übersetzungen i
 
 ---
 
-Mit Liebe erstellt für Roza & Deniz ♡
+Mit Liebe erstellt für Roze & Deniz ♡
