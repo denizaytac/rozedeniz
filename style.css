@@ -713,3 +713,121 @@ html {
     margin-top: 0.5rem;
     line-height: 1.2;
 }
+
+/* Countdown Section */
+.countdown {
+    background: var(--bg-light);
+    position: relative;
+    padding: clamp(4rem, 12vw, 6rem) 20px;
+}
+
+.countdown::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('assets/grain-texture.svg');
+    background-repeat: repeat;
+    background-size: 180px 180px;
+    opacity: 0.03;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.countdown-timer {
+    display: flex;
+    justify-content: center;
+    gap: clamp(1.5rem, 5vw, 4rem);
+    flex-wrap: wrap;
+    max-width: 900px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.countdown-item {
+    text-align: center;
+    padding: clamp(1.5rem, 4vw, 2.5rem) clamp(1.5rem, 4vw, 3rem);
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    box-shadow:
+        0 4px 16px rgba(0, 0, 0, 0.08),
+        0 8px 32px rgba(0, 0, 0, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    min-width: clamp(120px, 20vw, 160px);
+}
+
+.countdown-item:hover {
+    transform: translateY(-8px);
+    box-shadow:
+        0 8px 24px rgba(0, 0, 0, 0.12),
+        0 16px 48px rgba(26, 58, 82, 0.15);
+    background: rgba(255, 255, 255, 0.95);
+}
+
+.countdown-number {
+    font-family: 'Lato', sans-serif;
+    font-size: clamp(3rem, 8vw, 5rem);
+    font-weight: 700;
+    color: var(--primary-color);
+    line-height: 1;
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.02em;
+}
+
+.countdown-label {
+    font-family: 'Lora', serif;
+    font-size: clamp(1rem, 2.5vw, 1.3rem);
+    color: var(--text-light);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: 400;
+}
+
+.countdown-finished {
+    font-family: 'Lora', serif;
+    font-size: clamp(2rem, 5vw, 3rem);
+    color: var(--primary-color);
+    text-align: center;
+    padding: 3rem 2rem;
+    font-weight: 500;
+}
+
+/* Countdown animation */
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+.countdown-number {
+    animation: pulse 2s ease-in-out infinite;
+}
+
+/* Responsive for countdown */
+@media (max-width: 768px) {
+    .countdown-timer {
+        gap: 1rem;
+    }
+
+    .countdown-item {
+        min-width: 100px;
+        padding: 1.5rem 1rem;
+    }
+
+    .countdown-number {
+        font-size: 2.5rem;
+    }
+
+    .countdown-label {
+        font-size: 0.9rem;
+    }
+}

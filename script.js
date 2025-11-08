@@ -58,11 +58,59 @@
     }, 5000);
 })();
 
+// Wedding Countdown
+// Set the wedding date (May 23, 2026 at 17:00)
+const weddingDate = new Date("May 23, 2026 17:00:00").getTime();
+
+function updateCountdown() {
+    // Get current time
+    const now = new Date().getTime();
+
+    // Calculate time difference
+    const timeRemaining = weddingDate - now;
+
+    // Calculate days, hours, minutes, and seconds
+    const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+
+    // Update the DOM elements
+    const daysElement = document.getElementById("days");
+    const hoursElement = document.getElementById("hours");
+    const minutesElement = document.getElementById("minutes");
+    const secondsElement = document.getElementById("seconds");
+
+    if (daysElement) daysElement.innerHTML = days >= 0 ? days : 0;
+    if (hoursElement) hoursElement.innerHTML = hours >= 0 ? hours : 0;
+    if (minutesElement) minutesElement.innerHTML = minutes >= 0 ? minutes : 0;
+    if (secondsElement) secondsElement.innerHTML = seconds >= 0 ? seconds : 0;
+
+    // If countdown is finished, display a message
+    if (timeRemaining < 0) {
+        const countdownSection = document.querySelector('.countdown-timer');
+        if (countdownSection) {
+            countdownSection.innerHTML = '<div class="countdown-finished">Der große Tag ist da! 🎉</div>';
+        }
+    }
+}
+
+// Update countdown every second
+setInterval(updateCountdown, 1000);
+
+// Initial call to display countdown immediately
+updateCountdown();
+
 // Translation data
 const translations = {
     de: {
         'hero.location': 'Rohrmeisterei, Schwerte',
         'hero.addToCalendar': 'Zum Kalender hinzufügen',
+        'countdown.title': 'Countdown bis zur Hochzeit',
+        'countdown.days': 'Tage',
+        'countdown.hours': 'Stunden',
+        'countdown.minutes': 'Minuten',
+        'countdown.seconds': 'Sekunden',
         'message.title': 'Unsere Einladung',
         'message.content': `
             <p>Liebe Familie und Freunde,</p>
@@ -108,6 +156,11 @@ const translations = {
     tr: {
         'hero.location': 'Rohrmeisterei, Schwerte',
         'hero.addToCalendar': 'Takvime Ekle',
+        'countdown.title': 'Düğüne Geri Sayım',
+        'countdown.days': 'Gün',
+        'countdown.hours': 'Saat',
+        'countdown.minutes': 'Dakika',
+        'countdown.seconds': 'Saniye',
         'message.title': 'Davetimiz',
         'message.content': `
             <p>Sevgili Ailemiz ve Arkadaşlarımız,</p>
@@ -153,6 +206,11 @@ const translations = {
     za: {
         'hero.location': 'Rohrmeisterei, Schwerte',
         'hero.addToCalendar': 'Bicî Takvîmî',
+        'countdown.title': 'Hejmara Rojan Heta Dawetê',
+        'countdown.days': 'Roj',
+        'countdown.hours': 'Sehat',
+        'countdown.minutes': 'Deqîqe',
+        'countdown.seconds': 'Sanîye',
         'message.title': 'Daweta Ma',
         'message.content': `
             <p>Famîlya û hevalên azîz,</p>
