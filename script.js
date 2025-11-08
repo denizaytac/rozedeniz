@@ -315,93 +315,9 @@ function initParallax() {
     updateParallax();
 }
 
-// Timeline Animation on Scroll
-function initTimelineAnimation() {
-    const timeline = document.querySelector('.timeline');
-    const timelineGrid = document.querySelector('.timeline-grid');
-    const timelineItems = document.querySelectorAll('.timeline-item');
-
-    if (!timeline || !timelineGrid || !timelineItems.length) return;
-
-    let ticking = false;
-
-    // Function to update timeline line based on scroll
-    function updateTimelineLine() {
-        const timelineRect = timeline.getBoundingClientRect();
-        const timelineGridRect = timelineGrid.getBoundingClientRect();
-        const windowHeight = window.innerHeight;
-
-        // Calculate how much of the timeline section is visible
-        // Timeline starts revealing when it enters viewport
-        const timelineTop = timelineGridRect.top;
-        const timelineBottom = timelineGridRect.bottom;
-        const timelineHeight = timelineGridRect.height;
-
-        // Start animation when timeline enters viewport (from bottom)
-        if (timelineTop < windowHeight && timelineBottom > 0) {
-            // Calculate scroll progress (0 to 1)
-            let progress = 0;
-
-            if (timelineTop <= windowHeight * 0.8) {
-                // Calculate how far we've scrolled into the timeline
-                const scrolledIntoTimeline = windowHeight * 0.8 - timelineTop;
-                const maxScroll = timelineHeight + (windowHeight * 0.8);
-                progress = Math.min(scrolledIntoTimeline / maxScroll, 1);
-            }
-
-            // Apply the scale transformation to grow the line
-            timelineGrid.style.setProperty('--timeline-progress', progress);
-            if (timelineGrid.querySelector('::before')) {
-                // Using CSS transform via inline style
-                const beforeElement = window.getComputedStyle(timelineGrid, '::before');
-                timelineGrid.style.setProperty('--line-scale', progress);
-            }
-
-            // Update CSS variable for line growth
-            document.documentElement.style.setProperty('--timeline-line-progress', progress);
-        }
-
-        ticking = false;
-    }
-
-    // Intersection Observer for timeline dots
-    const observerOptions = {
-        root: null,
-        threshold: 0.5, // Trigger when 50% of item is visible
-        rootMargin: '-10% 0px -10% 0px' // Slight offset
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('reveal');
-            }
-        });
-    }, observerOptions);
-
-    // Observe all timeline items
-    timelineItems.forEach(item => {
-        observer.observe(item);
-    });
-
-    // Scroll event for line animation
-    function requestTick() {
-        if (!ticking) {
-            window.requestAnimationFrame(updateTimelineLine);
-            ticking = true;
-        }
-    }
-
-    window.addEventListener('scroll', requestTick, { passive: true });
-
-    // Initial call
-    updateTimelineLine();
-}
-
 // Initialize parallax on page load
 document.addEventListener('DOMContentLoaded', function() {
     initParallax();
-    initTimelineAnimation();
 });
 
 // Smooth scroll for any future navigation links
