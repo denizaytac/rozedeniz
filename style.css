@@ -180,6 +180,45 @@ h1, h2, h3 {
     text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
 }
 
+/* Calendar Button */
+.calendar-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 30px;
+    padding: 14px 28px;
+    background: rgba(255, 255, 255, 0.95);
+    color: var(--primary-color);
+    text-decoration: none;
+    font-family: 'Inter', sans-serif;
+    font-size: clamp(0.95rem, 2vw, 1.05rem);
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    border-radius: 50px;
+    border: 2px solid rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+}
+
+.calendar-button:hover {
+    background: var(--primary-color);
+    color: var(--bg-white);
+    border-color: var(--primary-color);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(26, 58, 82, 0.35);
+}
+
+.calendar-button svg {
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.calendar-button:hover svg {
+    transform: scale(1.1);
+}
+
 /* Section Styles */
 section {
     padding: clamp(4rem, 12vw, 8rem) 20px;
@@ -464,6 +503,10 @@ html {
 
 .hero-location {
     animation-delay: 0.7s;
+}
+
+.calendar-button {
+    animation-delay: 0.9s;
 }
 
 /* Scroll Reveal Animation */

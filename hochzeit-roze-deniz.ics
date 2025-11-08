@@ -1,0 +1,24 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Roze & Deniz//Wedding//DE
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:roze-deniz-wedding-2026@rozedeniz.com
+DTSTAMP:20251108T120000Z
+DTSTART:20260523T150000Z
+DTEND:20260523T233000Z
+SUMMARY:Hochzeit Roze & Deniz
+LOCATION:Rohrmeisterei, Ruhrstraße 20, 58239 Schwerte
+DESCRIPTION:Feiert mit uns die Hochzeit von Roze & Deniz.\n\nProgrammablauf:\n17:00 - Sektempfang\n18:00 - Trauung\n19:00 - Dinner\n21:00 - Anschnitt der Torte\n22:00 - Party & Tanz\n01:30 - Letzter Song
+GEO:51.4428;7.5647
+URL:https://rozedeniz.com
+STATUS:CONFIRMED
+SEQUENCE:0
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Erinnerung: Hochzeit Roze & Deniz morgen um 17:00
+END:VALARM
+END:VEVENT
+END:VCALENDAR
