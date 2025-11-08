@@ -2,6 +2,7 @@
 const translations = {
     de: {
         'hero.location': 'Rohrmeisterei, Schwerte',
+        'hero.addToCalendar': 'Zum Kalender hinzufügen',
         'message.title': 'Unsere Einladung',
         'message.content': `
             <p>Liebe Familie und Freunde,</p>
@@ -46,6 +47,7 @@ const translations = {
     },
     tr: {
         'hero.location': 'Rohrmeisterei, Schwerte',
+        'hero.addToCalendar': 'Takvime Ekle',
         'message.title': 'Davetimiz',
         'message.content': `
             <p>Sevgili Ailemiz ve Arkadaşlarımız,</p>
@@ -90,6 +92,7 @@ const translations = {
     },
     za: {
         'hero.location': 'Rohrmeisterei, Schwerte',
+        'hero.addToCalendar': 'Bicî Takvîmî',
         'message.title': 'Daweta Ma',
         'message.content': `
             <p>Famîlya û hevalên azîz,</p>
