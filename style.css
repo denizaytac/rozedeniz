@@ -237,35 +237,77 @@ section {
     background: var(--white);
 }
 
-.faq-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 40px;
-    max-width: 1000px;
+.faq-container {
+    max-width: 800px;
     margin: 0 auto;
 }
 
 .faq-item {
-    padding: 30px;
-    background: var(--bg-light);
-    border-radius: 10px;
-    transition: background 0.3s ease;
+    border-bottom: 1px solid var(--smoke);
+    transition: all 0.3s ease;
 }
 
-.faq-item:hover {
-    background: var(--smoke);
+.faq-item:last-child {
+    border-bottom: none;
 }
 
 .faq-question {
+    width: 100%;
+    background: transparent;
+    border: none;
+    padding: 25px 0;
+    text-align: left;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Playfair Display', serif;
     font-size: 1.3rem;
-    margin-bottom: 15px;
     color: var(--text-dark);
     font-weight: 500;
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+.faq-question:hover {
+    color: var(--primary-color);
+}
+
+.faq-question:focus {
+    outline: none;
+}
+
+.faq-icon {
+    font-size: 1.8rem;
+    font-weight: 300;
+    color: var(--primary-color);
+    transition: transform 0.3s ease;
+    min-width: 30px;
+    text-align: center;
+    margin-left: 20px;
+}
+
+.faq-item.active .faq-icon {
+    transform: rotate(45deg);
 }
 
 .faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, padding 0.4s ease;
+    padding: 0;
+}
+
+.faq-item.active .faq-answer {
+    max-height: 500px;
+    padding-bottom: 25px;
+}
+
+.faq-answer p {
     color: var(--text-light);
     line-height: 1.8;
+    font-size: 1.05rem;
+    margin: 0;
 }
 
 /* Footer */
@@ -302,9 +344,22 @@ footer p {
         height: 200px;
     }
 
-    .timeline-grid,
-    .faq-grid {
+    .timeline-grid {
         grid-template-columns: 1fr;
+    }
+
+    .faq-question {
+        font-size: 1.1rem;
+        padding: 20px 0;
+    }
+
+    .faq-icon {
+        font-size: 1.5rem;
+        margin-left: 15px;
+    }
+
+    .faq-answer p {
+        font-size: 1rem;
     }
 
     section {

@@ -122,6 +122,9 @@ document.addEventListener('DOMContentLoaded', function() {
             btn.classList.remove('active');
         }
     });
+
+    // Set up FAQ accordion
+    initializeFAQAccordion();
 });
 
 // Switch language function
@@ -148,6 +151,27 @@ function switchLanguage(lang) {
 
     // Update HTML lang attribute
     document.documentElement.lang = lang;
+}
+
+// FAQ Accordion functionality
+function initializeFAQAccordion() {
+    const faqQuestions = document.querySelectorAll('.faq-question');
+
+    faqQuestions.forEach(question => {
+        question.addEventListener('click', function() {
+            const faqItem = this.parentElement;
+            const isActive = faqItem.classList.contains('active');
+
+            // Toggle the clicked item
+            faqItem.classList.toggle('active');
+
+            // Update icon
+            const icon = this.querySelector('.faq-icon');
+            if (icon) {
+                icon.textContent = isActive ? '+' : '−';
+            }
+        });
+    });
 }
 
 // Smooth scroll for any future navigation links
