@@ -7,7 +7,7 @@ const translations = {
             <p>Liebe Familie und Freunde,</p>
             <p>Wir freuen uns sehr, diesen besonderen Tag mit euch zu teilen. Es bedeutet uns die Welt, dass ihr Teil unserer Geschichte seid.</p>
             <p>Feiert mit uns Liebe, Lachen und den Beginn eines neuen Kapitels.</p>
-            <p>Mit Liebe,<br>Roze & Deniz</p>
+            <p>Mit Liebe,<br><span class="signature">Roze & Deniz</span></p>
         `,
         'timeline.title': 'Programmablauf',
         'timeline.reception': 'Sektempfang',
@@ -51,7 +51,7 @@ const translations = {
             <p>Sevgili Ailemiz ve Arkadaşlarımız,</p>
             <p>Bu özel günü sizlerle paylaşmaktan çok mutluyuz. Hikayemizin bir parçası olmanız bizim için çok değerli.</p>
             <p>Aşkı, kahkahayı ve yeni bir bölümün başlangıcını bizimle kutlayın.</p>
-            <p>Sevgiyle,<br>Roze & Deniz</p>
+            <p>Sevgiyle,<br><span class="signature">Roze & Deniz</span></p>
         `,
         'timeline.title': 'Program Akışı',
         'timeline.reception': 'Şampanya İkramı',
@@ -95,7 +95,7 @@ const translations = {
             <p>Famîlya û hevalên azîz,</p>
             <p>Ma zaf şa bîme ke ena roja xusûsî ya xo bi şima ra parvaz bikerîme. Şima ke beşêk ji dîroka ma ye, şima rê ma zaf girîng ê.</p>
             <p>Heznayîş, hênayîş û destpêka beşêk neweyî bi ma ra şadî bikerê.</p>
-            <p>Bi heznayîş,<br>Roze û Deniz</p>
+            <p>Bi heznayîş,<br><span class="signature">Roze û Deniz</span></p>
         `,
         'timeline.title': 'Programa Rojê',
         'timeline.reception': 'Pêşwazîya Şampanya',
@@ -215,6 +215,47 @@ function initializeFAQAccordion() {
         });
     });
 }
+
+// Parallax Effect for Hero Background
+function initParallax() {
+    const heroBackground = document.querySelector('.hero-background');
+    const hero = document.querySelector('.hero');
+
+    if (!heroBackground || !hero) return;
+
+    let ticking = false;
+
+    function updateParallax() {
+        const scrolled = window.pageYOffset;
+        const heroHeight = hero.offsetHeight;
+
+        // Only apply parallax while hero is visible
+        if (scrolled < heroHeight) {
+            // Move background slower than scroll (0.5 = half speed)
+            const yPos = scrolled * 0.5;
+            heroBackground.style.transform = `translateY(${yPos}px) scale(1.01)`;
+        }
+
+        ticking = false;
+    }
+
+    function requestTick() {
+        if (!ticking) {
+            window.requestAnimationFrame(updateParallax);
+            ticking = true;
+        }
+    }
+
+    window.addEventListener('scroll', requestTick, { passive: true });
+
+    // Initial call
+    updateParallax();
+}
+
+// Initialize parallax on page load
+document.addEventListener('DOMContentLoaded', function() {
+    initParallax();
+});
 
 // Smooth scroll for any future navigation links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
