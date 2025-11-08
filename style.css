@@ -45,7 +45,7 @@
 }
 
 body {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Source Sans 3', sans-serif;
     color: var(--text-dark);
     line-height: 1.7;
     background-color: var(--bg-white);
@@ -164,7 +164,7 @@ h1, h2, h3 {
 .hero-date {
     font-size: clamp(1.25rem, 3vw, 1.75rem);
     font-weight: 400;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Source Sans 3', sans-serif;
     letter-spacing: 0.15em;
     margin-bottom: 15px;
     color: rgba(255, 255, 255, 0.95);
@@ -176,7 +176,7 @@ h1, h2, h3 {
     color: rgba(255, 255, 255, 0.95);
     font-weight: 400;
     letter-spacing: 0.08em;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Source Sans 3', sans-serif;
     text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
 }
 
@@ -334,7 +334,7 @@ section {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Source Sans 3', sans-serif;
     font-size: 1.15rem;
     color: var(--text-dark);
     font-weight: 500;
