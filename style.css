@@ -156,9 +156,11 @@ h1, h2, h3 {
     background-image: url('hero.jpg');
     background-size: cover;
     background-position: center 30%;
-    transform: scale(1.01);
     filter: none;
     z-index: 0;
+    will-change: transform;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
 }
 
 .hero-overlay {
