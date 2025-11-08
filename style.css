@@ -325,6 +325,17 @@ section {
     text-align: left;
     padding: 1rem 0 1rem 70px;
     position: relative;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+    border-radius: 8px;
+    margin-left: -10px;
+    padding-left: 80px;
+}
+
+.timeline-item:hover {
+    transform: translateY(-3px);
+    background: rgba(26, 58, 82, 0.03);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
 }
 
 .timeline-item::before {
@@ -388,7 +399,16 @@ section {
 
 .faq-item {
     border-bottom: 1px solid var(--smoke);
-    transition: all 0.3s ease;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border-radius: 8px;
+    padding: 0 15px;
+    margin: 0 -15px;
+}
+
+.faq-item:hover {
+    background: rgba(26, 58, 82, 0.02);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
 }
 
 .faq-item:last-child {
