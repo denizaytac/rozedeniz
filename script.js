@@ -58,66 +58,11 @@
     }, 5000);
 })();
 
-// Countdown Timer
-function initCountdown() {
-    // Target date: May 23, 2026 at 17:00
-    const weddingDate = new Date('2026-05-23T17:00:00').getTime();
-
-    function updateCountdown() {
-        const now = new Date().getTime();
-        const distance = weddingDate - now;
-
-        // Calculate time units
-        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-        // Update DOM with animation
-        updateCountdownValue('days', days);
-        updateCountdownValue('hours', hours);
-        updateCountdownValue('minutes', minutes);
-        updateCountdownValue('seconds', seconds);
-
-        // If countdown is over
-        if (distance < 0) {
-            clearInterval(countdownInterval);
-            document.getElementById('days').textContent = '0';
-            document.getElementById('hours').textContent = '0';
-            document.getElementById('minutes').textContent = '0';
-            document.getElementById('seconds').textContent = '0';
-        }
-    }
-
-    function updateCountdownValue(id, value) {
-        const element = document.getElementById(id);
-        const paddedValue = value.toString().padStart(2, '0');
-
-        if (element && element.textContent !== paddedValue) {
-            element.classList.add('flip');
-            setTimeout(() => {
-                element.textContent = paddedValue;
-                element.classList.remove('flip');
-            }, 300);
-        }
-    }
-
-    // Update every second
-    const countdownInterval = setInterval(updateCountdown, 1000);
-
-    // Initial call
-    updateCountdown();
-}
-
 // Translation data
 const translations = {
     de: {
         'hero.location': 'Rohrmeisterei, Schwerte',
         'hero.addToCalendar': 'Zum Kalender hinzufügen',
-        'countdown.days': 'Tage',
-        'countdown.hours': 'Stunden',
-        'countdown.minutes': 'Minuten',
-        'countdown.seconds': 'Sekunden',
         'message.title': 'Unsere Einladung',
         'message.content': `
             <p>Liebe Familie und Freunde,</p>
@@ -163,10 +108,6 @@ const translations = {
     tr: {
         'hero.location': 'Rohrmeisterei, Schwerte',
         'hero.addToCalendar': 'Takvime Ekle',
-        'countdown.days': 'Gün',
-        'countdown.hours': 'Saat',
-        'countdown.minutes': 'Dakika',
-        'countdown.seconds': 'Saniye',
         'message.title': 'Davetimiz',
         'message.content': `
             <p>Sevgili Ailemiz ve Arkadaşlarımız,</p>
@@ -212,10 +153,6 @@ const translations = {
     za: {
         'hero.location': 'Rohrmeisterei, Schwerte',
         'hero.addToCalendar': 'Bicî Takvîmî',
-        'countdown.days': 'Rojî',
-        'countdown.hours': 'Saetî',
-        'countdown.minutes': 'Deqeyî',
-        'countdown.seconds': 'Saniyeyî',
         'message.title': 'Daweta Ma',
         'message.content': `
             <p>Famîlya û hevalên azîz,</p>
@@ -293,9 +230,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Set up FAQ accordion
     initializeFAQAccordion();
-
-    // Initialize countdown timer
-    initCountdown();
 });
 
 // Switch language function
