@@ -180,6 +180,47 @@ function initializeFAQAccordion() {
     });
 }
 
+// Parallax Effect for Hero Background
+function initParallax() {
+    const heroBackground = document.querySelector('.hero-background');
+    const hero = document.querySelector('.hero');
+
+    if (!heroBackground || !hero) return;
+
+    let ticking = false;
+
+    function updateParallax() {
+        const scrolled = window.pageYOffset;
+        const heroHeight = hero.offsetHeight;
+
+        // Only apply parallax while hero is visible
+        if (scrolled < heroHeight) {
+            // Move background slower than scroll (0.5 = half speed)
+            const yPos = scrolled * 0.5;
+            heroBackground.style.transform = `translateY(${yPos}px) scale(1.01)`;
+        }
+
+        ticking = false;
+    }
+
+    function requestTick() {
+        if (!ticking) {
+            window.requestAnimationFrame(updateParallax);
+            ticking = true;
+        }
+    }
+
+    window.addEventListener('scroll', requestTick, { passive: true });
+
+    // Initial call
+    updateParallax();
+}
+
+// Initialize parallax on page load
+document.addEventListener('DOMContentLoaded', function() {
+    initParallax();
+});
+
 // Smooth scroll for any future navigation links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
