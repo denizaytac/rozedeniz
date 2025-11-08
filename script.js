@@ -1,3 +1,63 @@
+// Preloader - Load critical assets before showing page
+(function() {
+    const preloader = document.getElementById('preloader');
+
+    // Track loaded assets
+    let fontsLoaded = false;
+    let heroImageLoaded = false;
+
+    // Check if all critical assets are loaded
+    function checkAllAssetsLoaded() {
+        if (fontsLoaded && heroImageLoaded) {
+            // Add a small delay for better UX (minimum 800ms to see the preloader)
+            setTimeout(() => {
+                preloader.classList.add('fade-out');
+                // Remove from DOM after fade out animation completes
+                setTimeout(() => {
+                    preloader.style.display = 'none';
+                }, 800);
+            }, 800);
+        }
+    }
+
+    // Load hero image
+    const heroImage = new Image();
+    heroImage.onload = function() {
+        heroImageLoaded = true;
+        checkAllAssetsLoaded();
+    };
+    heroImage.onerror = function() {
+        // If image fails to load, still hide preloader
+        heroImageLoaded = true;
+        checkAllAssetsLoaded();
+    };
+    heroImage.src = 'hero.jpg';
+
+    // Check if fonts are loaded
+    if (document.fonts && document.fonts.ready) {
+        document.fonts.ready.then(function() {
+            fontsLoaded = true;
+            checkAllAssetsLoaded();
+        });
+    } else {
+        // Fallback if Font Loading API is not supported
+        setTimeout(function() {
+            fontsLoaded = true;
+            checkAllAssetsLoaded();
+        }, 1000);
+    }
+
+    // Fallback: Hide preloader after max 5 seconds regardless
+    setTimeout(function() {
+        if (!preloader.classList.contains('fade-out')) {
+            preloader.classList.add('fade-out');
+            setTimeout(() => {
+                preloader.style.display = 'none';
+            }, 800);
+        }
+    }, 5000);
+})();
+
 // Translation data
 const translations = {
     de: {
