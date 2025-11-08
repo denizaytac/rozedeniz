@@ -51,6 +51,23 @@ body {
     background-color: var(--bg-white);
     font-weight: 300;
     letter-spacing: 0.01em;
+    position: relative;
+}
+
+/* Subtile Analog-Textur für digitalen Glanz-Bruch */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('assets/grain-texture.svg');
+    background-repeat: repeat;
+    background-size: 200px 200px;
+    opacity: 0.035;
+    pointer-events: none;
+    z-index: 9999;
 }
 
 h1, h2, h3 {
@@ -194,6 +211,7 @@ section {
     font-weight: 500;
     position: relative;
     padding-bottom: 1rem;
+    z-index: 1;
 }
 
 .section-title::after {
@@ -210,6 +228,22 @@ section {
 /* Personal Message Section */
 .personal-message {
     background: var(--bg-white);
+    position: relative;
+}
+
+.personal-message::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('assets/grain-texture.svg');
+    background-repeat: repeat;
+    background-size: 180px 180px;
+    opacity: 0.025;
+    pointer-events: none;
+    z-index: 0;
 }
 
 .message-content {
@@ -220,6 +254,8 @@ section {
     line-height: 2;
     color: var(--text-light);
     font-weight: 400;
+    position: relative;
+    z-index: 1;
 }
 
 .message-content p {
@@ -247,6 +283,22 @@ section {
 /* Timeline Section */
 .timeline {
     background: var(--bg-light);
+    position: relative;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('assets/grain-texture.svg');
+    background-repeat: repeat;
+    background-size: 180px 180px;
+    opacity: 0.03;
+    pointer-events: none;
+    z-index: 0;
 }
 
 .timeline-grid {
@@ -256,6 +308,7 @@ section {
     max-width: 700px;
     margin: 0 auto;
     position: relative;
+    z-index: 1;
 }
 
 .timeline-grid::before {
@@ -308,11 +361,29 @@ section {
 /* FAQ Section */
 .faq {
     background: var(--bg-white);
+    position: relative;
+}
+
+.faq::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('assets/grain-texture.svg');
+    background-repeat: repeat;
+    background-size: 180px 180px;
+    opacity: 0.025;
+    pointer-events: none;
+    z-index: 0;
 }
 
 .faq-container {
     max-width: 800px;
     margin: 0 auto;
+    position: relative;
+    z-index: 1;
 }
 
 .faq-item {
@@ -500,12 +571,30 @@ html {
 /* Anfahrt Section */
 .anfahrt {
     background: var(--bg-light);
+    position: relative;
+}
+
+.anfahrt::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('assets/grain-texture.svg');
+    background-repeat: repeat;
+    background-size: 180px 180px;
+    opacity: 0.03;
+    pointer-events: none;
+    z-index: 0;
 }
 
 .anfahrt-content {
     text-align: center;
     max-width: 600px;
     margin: 0 auto;
+    position: relative;
+    z-index: 1;
 }
 
 .anfahrt-content p {
