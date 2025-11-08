@@ -7,7 +7,7 @@ const translations = {
             <p>Liebe Familie und Freunde,</p>
             <p>Wir freuen uns sehr, diesen besonderen Tag mit euch zu teilen. Es bedeutet uns die Welt, dass ihr Teil unserer Geschichte seid.</p>
             <p>Feiert mit uns Liebe, Lachen und den Beginn eines neuen Kapitels.</p>
-            <p>Mit Liebe,<br>Roze & Deniz</p>
+            <p>Mit Liebe,<br><span class="signature">Roze & Deniz</span></p>
         `,
         'timeline.title': 'Programmablauf',
         'timeline.reception': 'Sektempfang',
@@ -39,7 +39,7 @@ const translations = {
             <p>Sevgili Ailemiz ve Arkadaşlarımız,</p>
             <p>Bu özel günü sizlerle paylaşmaktan çok mutluyuz. Hikayemizin bir parçası olmanız bizim için çok değerli.</p>
             <p>Aşkı, kahkahayı ve yeni bir bölümün başlangıcını bizimle kutlayın.</p>
-            <p>Sevgiyle,<br>Roze & Deniz</p>
+            <p>Sevgiyle,<br><span class="signature">Roze & Deniz</span></p>
         `,
         'timeline.title': 'Program Akışı',
         'timeline.reception': 'Şampanya İkramı',
@@ -71,7 +71,7 @@ const translations = {
             <p>Famîlya û hevalên azîz,</p>
             <p>Ma zaf şa bîme ke ena roja xusûsî ya xo bi şima ra parvaz bikerîme. Şima ke beşêk ji dîroka ma ye, şima rê ma zaf girîng ê.</p>
             <p>Heznayîş, hênayîş û destpêka beşêk neweyî bi ma ra şadî bikerê.</p>
-            <p>Bi heznayîş,<br>Roze û Deniz</p>
+            <p>Bi heznayîş,<br><span class="signature">Roze û Deniz</span></p>
         `,
         'timeline.title': 'Programa Rojê',
         'timeline.reception': 'Pêşwazîya Şampanya',
