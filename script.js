@@ -28,7 +28,10 @@ const translations = {
         'faq.q5': 'Was wünscht ihr euch?',
         'faq.a5': 'Eure Anwesenheit ist das größte Geschenk. Über einen Beitrag zu unseren Flitterwochen würden wir uns freuen.',
         'faq.q6': 'Bis wann muss ich zusagen?',
-        'faq.a6': 'Bitte gebt uns bis zum 01.04.2026 Bescheid, ob ihr dabei sein könnt.'
+        'faq.a6': 'Bitte gebt uns bis zum 01.04.2026 Bescheid, ob ihr dabei sein könnt.',
+        'anfahrt.title': 'Anfahrt',
+        'anfahrt.address': 'Rohrmeisterei Schwerte<br>Ruhrstraße 20, 58239 Schwerte',
+        'anfahrt.button': 'Route planen'
     },
     tr: {
         'hero.location': 'Rohrmeisterei, Schwerte',
@@ -58,7 +61,10 @@ const translations = {
         'faq.q5': 'Hediye olarak ne istersiniz?',
         'faq.a5': 'Varlığınız en büyük hediye. Balayımıza katkıda bulunmanızdan mutluluk duyarız.',
         'faq.q6': 'Ne zamana kadar onay vermem gerekiyor?',
-        'faq.a6': 'Lütfen 01.04.2026 tarihine kadar katılıp katılamayacağınızı bize bildirin.'
+        'faq.a6': 'Lütfen 01.04.2026 tarihine kadar katılıp katılamayacağınızı bize bildirin.',
+        'anfahrt.title': 'Yol Tarifi',
+        'anfahrt.address': 'Rohrmeisterei Schwerte<br>Ruhrstraße 20, 58239 Schwerte',
+        'anfahrt.button': 'Rota planla'
     },
     za: {
         'hero.location': 'Rohrmeisterei, Schwerte',
@@ -88,7 +94,10 @@ const translations = {
         'faq.q5': 'Şima çî wazenê?',
         'faq.a5': 'Hebûna şima cadoyêko gird o. Katkîyo şima rê seferê ma yê honeymoonî ma rê kêfweşî yo.',
         'faq.q6': 'Ez gani heta key qayîl bikerê?',
-        'faq.a6': 'Keremê bike heta 01.04.2026 ma rê vajê ke şima eşkeni bêrê yan ney.'
+        'faq.a6': 'Keremê bike heta 01.04.2026 ma rê vajê ke şima eşkeni bêrê yan ney.',
+        'anfahrt.title': 'Raya Ameyîşî',
+        'anfahrt.address': 'Rohrmeisterei Schwerte<br>Ruhrstraße 20, 58239 Schwerte',
+        'anfahrt.button': 'Ray planbike'
     }
 };
 
