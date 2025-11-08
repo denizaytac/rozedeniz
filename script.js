@@ -62,31 +62,6 @@
 // Set the wedding date (May 23, 2026 at 17:00)
 const weddingDate = new Date("May 23, 2026 17:00:00").getTime();
 
-// Store previous values for tick animation
-let previousValues = {
-    days: null,
-    hours: null,
-    minutes: null,
-    seconds: null
-};
-
-function animateNumberChange(element, newValue) {
-    // Add tick-out animation
-    element.classList.add('tick-out');
-
-    // After animation completes, update value and add tick-in animation
-    setTimeout(() => {
-        element.innerHTML = newValue;
-        element.classList.remove('tick-out');
-        element.classList.add('tick-in');
-
-        // Remove tick-in class after animation
-        setTimeout(() => {
-            element.classList.remove('tick-in');
-        }, 300);
-    }, 300);
-}
-
 function updateCountdown() {
     // Get current time
     const now = new Date().getTime();
@@ -100,44 +75,16 @@ function updateCountdown() {
     const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
     const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
 
-    // Get the DOM elements
+    // Update the DOM elements
     const daysElement = document.getElementById("days");
     const hoursElement = document.getElementById("hours");
     const minutesElement = document.getElementById("minutes");
     const secondsElement = document.getElementById("seconds");
 
-    // Update with animation if value changed
-    if (daysElement && previousValues.days !== null && previousValues.days !== days) {
-        animateNumberChange(daysElement, days >= 0 ? days : 0);
-    } else if (daysElement && previousValues.days === null) {
-        daysElement.innerHTML = days >= 0 ? days : 0;
-    }
-
-    if (hoursElement && previousValues.hours !== null && previousValues.hours !== hours) {
-        animateNumberChange(hoursElement, hours >= 0 ? hours : 0);
-    } else if (hoursElement && previousValues.hours === null) {
-        hoursElement.innerHTML = hours >= 0 ? hours : 0;
-    }
-
-    if (minutesElement && previousValues.minutes !== null && previousValues.minutes !== minutes) {
-        animateNumberChange(minutesElement, minutes >= 0 ? minutes : 0);
-    } else if (minutesElement && previousValues.minutes === null) {
-        minutesElement.innerHTML = minutes >= 0 ? minutes : 0;
-    }
-
-    if (secondsElement && previousValues.seconds !== null && previousValues.seconds !== seconds) {
-        animateNumberChange(secondsElement, seconds >= 0 ? seconds : 0);
-    } else if (secondsElement && previousValues.seconds === null) {
-        secondsElement.innerHTML = seconds >= 0 ? seconds : 0;
-    }
-
-    // Store current values for next comparison
-    previousValues = {
-        days: days >= 0 ? days : 0,
-        hours: hours >= 0 ? hours : 0,
-        minutes: minutes >= 0 ? minutes : 0,
-        seconds: seconds >= 0 ? seconds : 0
-    };
+    if (daysElement) daysElement.innerHTML = days >= 0 ? days : 0;
+    if (hoursElement) hoursElement.innerHTML = hours >= 0 ? hours : 0;
+    if (minutesElement) minutesElement.innerHTML = minutes >= 0 ? minutes : 0;
+    if (secondsElement) secondsElement.innerHTML = seconds >= 0 ? seconds : 0;
 
     // If countdown is finished, display a message
     if (timeRemaining < 0) {
