@@ -209,7 +209,7 @@ h1, h2, h3 {
     background: rgba(255, 255, 255, 0.95);
     color: var(--primary-color);
     text-decoration: none;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Source Sans 3', sans-serif;
     font-size: clamp(0.95rem, 2vw, 1.05rem);
     font-weight: 500;
     letter-spacing: 0.02em;
@@ -393,7 +393,7 @@ section {
 
 .timeline-time {
     font-size: 1.25rem;
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Source Sans 3', sans-serif;
     text-transform: uppercase;
     color: var(--text-dark);
     font-weight: 600;
@@ -680,7 +680,7 @@ html {
 
 /* Handwritten Signature */
 .signature {
-    font-family: 'Great Vibes', cursive;
+    font-family: 'Elms Sans', sans-serif;
     font-size: clamp(2rem, 5vw, 2.8rem);
     color: var(--primary-color);
     font-weight: 400;
