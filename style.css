@@ -716,7 +716,12 @@ html {
 
 /* Countdown Section */
 .countdown {
-    background: var(--bg-light);
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+        url('hero.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
     position: relative;
     padding: clamp(4rem, 12vw, 6rem) 20px;
 }
@@ -773,7 +778,7 @@ html {
 .countdown-number {
     font-family: 'Lato', sans-serif;
     font-size: clamp(3rem, 8vw, 5rem);
-    font-weight: 700;
+    font-weight: 300;
     color: var(--primary-color);
     line-height: 1;
     margin-bottom: 0.5rem;
@@ -798,18 +803,55 @@ html {
     font-weight: 500;
 }
 
-/* Countdown animation */
-@keyframes pulse {
+/* Countdown animation - Subtle Glow */
+@keyframes subtleGlow {
     0%, 100% {
-        transform: scale(1);
+        text-shadow:
+            0 0 10px rgba(26, 58, 82, 0.3),
+            0 0 20px rgba(26, 58, 82, 0.1);
     }
     50% {
-        transform: scale(1.05);
+        text-shadow:
+            0 0 20px rgba(26, 58, 82, 0.5),
+            0 0 30px rgba(26, 58, 82, 0.2),
+            0 0 40px rgba(26, 58, 82, 0.1);
     }
 }
 
 .countdown-number {
-    animation: pulse 2s ease-in-out infinite;
+    animation: subtleGlow 4s ease-in-out infinite;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Number tick animations */
+@keyframes tickOut {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+}
+
+@keyframes tickIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.countdown-number.tick-out {
+    animation: tickOut 0.3s ease-out forwards, subtleGlow 4s ease-in-out infinite;
+}
+
+.countdown-number.tick-in {
+    animation: tickIn 0.3s ease-out forwards, subtleGlow 4s ease-in-out infinite;
 }
 
 /* Responsive for countdown */
