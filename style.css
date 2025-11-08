@@ -497,6 +497,58 @@ html {
 .faq-item:nth-child(5) { animation-delay: 0.3s; }
 .faq-item:nth-child(6) { animation-delay: 0.35s; }
 
+/* Section Divider */
+.section-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: clamp(2rem, 6vw, 4rem) 0;
+    position: relative;
+}
+
+.section-divider::before,
+.section-divider::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(
+        to right,
+        transparent,
+        var(--smoke),
+        transparent
+    );
+    max-width: 200px;
+}
+
+.section-divider-icon {
+    margin: 0 2rem;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+/* Minimalistisches botanisches Symbol */
+.section-divider-icon::before {
+    content: '✦';
+    font-size: 1.2rem;
+    color: var(--primary-color);
+    opacity: 0.6;
+}
+
+/* Alternative: Initialen R & D */
+.section-divider.initials .section-divider-icon::before {
+    content: 'R & D';
+    font-family: 'Elms Sans', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    color: var(--primary-color);
+    opacity: 0.7;
+}
+
 /* Anfahrt Section */
 .anfahrt {
     background: var(--bg-light);
