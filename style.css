@@ -686,3 +686,14 @@ html {
     border-radius: 16px;
     margin-top: 1.5rem;
 }
+
+/* Handwritten Signature */
+.signature {
+    font-family: 'Great Vibes', cursive;
+    font-size: clamp(2rem, 5vw, 2.8rem);
+    color: var(--primary-color);
+    font-weight: 400;
+    display: inline-block;
+    margin-top: 0.5rem;
+    line-height: 1.2;
+}
