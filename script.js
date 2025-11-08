@@ -30,7 +30,19 @@ const translations = {
         'faq.q6': 'Bis wann muss ich zusagen?',
         'faq.a6': 'Bitte gebt uns bis zum 01.04.2026 Bescheid, ob ihr dabei sein könnt.',
         'anfahrt.title': 'Anfahrt',
-        'anfahrt.address': 'Rohrmeisterei Schwerte<br>Ruhrstraße 20, 58239 Schwerte'
+        'anfahrt.address': 'Rohrmeisterei Schwerte<br>Ruhrstraße 20, 58239 Schwerte',
+        'accommodation.title': 'Übernachtung & Taxi',
+        'accommodation.hotels.title': 'Hotelempfehlungen',
+        'accommodation.hotels.intro': 'Für eure Übernachtung empfehlen wir folgende Hotels in der Nähe:',
+        'accommodation.hotel1.name': 'Hotel Reichshof',
+        'accommodation.hotel1.address': 'Bahnhofstr. 32, 58239 Schwerte',
+        'accommodation.hotel2.name': 'Breer\'s Hotel',
+        'accommodation.hotel2.address': 'Reichshofstr. 104, 58239 Schwerte',
+        'accommodation.hotel3.name': 'Hotel Menzebach - Olympia',
+        'accommodation.hotel3.address': 'Ostenstr. 23, 58239 Schwerte',
+        'accommodation.phone': 'Telefon:',
+        'accommodation.taxi.title': 'Taxi-Dienste',
+        'accommodation.taxi.intro': 'Für eure Fahrt zur Location oder zurück zum Hotel stehen euch folgende Taxi-Dienste zur Verfügung:'
     },
     tr: {
         'hero.location': 'Rohrmeisterei, Schwerte',
@@ -62,7 +74,19 @@ const translations = {
         'faq.q6': 'Ne zamana kadar onay vermem gerekiyor?',
         'faq.a6': 'Lütfen 01.04.2026 tarihine kadar katılıp katılamayacağınızı bize bildirin.',
         'anfahrt.title': 'Yol Tarifi',
-        'anfahrt.address': 'Rohrmeisterei Schwerte<br>Ruhrstraße 20, 58239 Schwerte'
+        'anfahrt.address': 'Rohrmeisterei Schwerte<br>Ruhrstraße 20, 58239 Schwerte',
+        'accommodation.title': 'Konaklama & Taksi',
+        'accommodation.hotels.title': 'Otel Önerileri',
+        'accommodation.hotels.intro': 'Konaklamanız için yakındaki şu otelleri öneriyoruz:',
+        'accommodation.hotel1.name': 'Hotel Reichshof',
+        'accommodation.hotel1.address': 'Bahnhofstr. 32, 58239 Schwerte',
+        'accommodation.hotel2.name': 'Breer\'s Hotel',
+        'accommodation.hotel2.address': 'Reichshofstr. 104, 58239 Schwerte',
+        'accommodation.hotel3.name': 'Hotel Menzebach - Olympia',
+        'accommodation.hotel3.address': 'Ostenstr. 23, 58239 Schwerte',
+        'accommodation.phone': 'Telefon:',
+        'accommodation.taxi.title': 'Taksi Hizmetleri',
+        'accommodation.taxi.intro': 'Mekana veya otele dönüş için aşağıdaki taksi hizmetlerinden yararlanabilirsiniz:'
     },
     za: {
         'hero.location': 'Rohrmeisterei, Schwerte',
@@ -94,7 +118,19 @@ const translations = {
         'faq.q6': 'Ez gani heta key qayîl bikerê?',
         'faq.a6': 'Keremê bike heta 01.04.2026 ma rê vajê ke şima eşkeni bêrê yan ney.',
         'anfahrt.title': 'Raya Ameyîşî',
-        'anfahrt.address': 'Rohrmeisterei Schwerte<br>Ruhrstraße 20, 58239 Schwerte'
+        'anfahrt.address': 'Rohrmeisterei Schwerte<br>Ruhrstraße 20, 58239 Schwerte',
+        'accommodation.title': 'Werzayîş û Taksî',
+        'accommodation.hotels.title': 'Tavsîyeyê Hotelî',
+        'accommodation.hotels.intro': 'Qerarê şima rê ma ney hotelê nêzdîyan tavsîye kenîme:',
+        'accommodation.hotel1.name': 'Hotel Reichshof',
+        'accommodation.hotel1.address': 'Bahnhofstr. 32, 58239 Schwerte',
+        'accommodation.hotel2.name': 'Breer\'s Hotel',
+        'accommodation.hotel2.address': 'Reichshofstr. 104, 58239 Schwerte',
+        'accommodation.hotel3.name': 'Hotel Menzebach - Olympia',
+        'accommodation.hotel3.address': 'Ostenstr. 23, 58239 Schwerte',
+        'accommodation.phone': 'Telefon:',
+        'accommodation.taxi.title': 'Xizmetê Taksîyan',
+        'accommodation.taxi.intro': 'Raya şima ya rê lokasyon yan zi hotêl rê ney xizmetê taksîyan şima rê amadeyî:'
     }
 };
 
