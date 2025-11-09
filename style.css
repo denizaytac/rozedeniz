@@ -118,8 +118,8 @@ h1, h2, h3 {
     align-items: center;
     gap: 6px;
     padding: 8px 12px;
-    background: rgba(255, 255, 255, 0.15);
-    color: rgba(255, 255, 255, 0.9);
+    background: rgba(0, 0, 0, 0.3);
+    color: #FFFFFF;
     text-decoration: none;
     font-family: 'Lato', sans-serif;
     font-size: clamp(0.8rem, 1.8vw, 0.9rem);
@@ -135,8 +135,8 @@ h1, h2, h3 {
 }
 
 .btn-glass-standard:hover {
-    background: rgba(255, 255, 255, 0.25);
-    color: rgba(255, 255, 255, 1);
+    background: rgba(0, 0, 0, 0.45);
+    color: #FFFFFF;
     border-color: rgba(255, 255, 255, 0.4);
     transform: translateY(-1px);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
