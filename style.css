@@ -745,8 +745,8 @@ html {
     display: flex;
     justify-content: center;
     align-items: baseline;
-    flex-wrap: nowrap;
-    gap: 1.5rem;
+    flex-wrap: wrap; /* Besser für mobile Ansicht */
+    gap: clamp(1.5rem, 4vw, 3rem); /* Dynamischer Abstand */
     max-width: 100%;
     margin: 0 auto;
     position: relative;
@@ -765,13 +765,10 @@ html {
     transform: scale(1.05);
 }
 
-.countdown-item:not(:last-child)::after {
-    content: '•';
-    margin-left: clamp(0.75rem, 2vw, 1.5rem);
-    color: var(--text-light);
-    font-size: clamp(1.5rem, 3vw, 2rem);
-    opacity: 0.4;
-}
+/* HIER IST DIE ÄNDERUNG:
+   Die Sektion .countdown-item:not(:last-child)::after wurde entfernt,
+   um die Punkte zu beseitigen.
+*/
 
 .countdown-number {
     font-family: 'Lato', sans-serif;
@@ -817,13 +814,8 @@ html {
 /* Responsive for countdown */
 @media (max-width: 768px) {
     .countdown-timer {
-        flex-wrap: wrap;
-        gap: 1rem;
+        gap: 1.5rem; /* Etwas mehr Abstand auf Mobilgeräten */
         justify-content: space-around;
-    }
-
-    .countdown-item:not(:last-child)::after {
-        margin-left: clamp(0.5rem, 1.5vw, 1rem);
     }
 
     .countdown-number {
