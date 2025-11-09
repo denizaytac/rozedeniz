@@ -743,6 +743,7 @@ html {
     justify-content: center;
     align-items: baseline;
     flex-wrap: nowrap;
+    gap: 1.5rem;
     max-width: 100%;
     margin: 0 auto;
     position: relative;
@@ -814,7 +815,8 @@ html {
 @media (max-width: 768px) {
     .countdown-timer {
         flex-wrap: wrap;
-        gap: 0.5rem 0;
+        gap: 1rem;
+        justify-content: space-around;
     }
 
     .countdown-item:not(:last-child)::after {
@@ -822,10 +824,10 @@ html {
     }
 
     .countdown-number {
-        font-size: clamp(1.8rem, 5vw, 2.5rem);
+        font-size: 2rem;
     }
 
     .countdown-label {
-        font-size: clamp(0.75rem, 1.8vw, 0.9rem);
+        font-size: 0.8rem;
     }
 }
