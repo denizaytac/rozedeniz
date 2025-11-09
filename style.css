@@ -1,18 +1,44 @@
-/* Font Face Definitions */
-@font-face {
-    font-family: 'Elms Sans';
-    src: url('fonts/ElmsSans-VariableFont.ttf') format('truetype-variations');
-    font-weight: 100 900;
-    font-style: normal;
-    font-display: swap;
+/* Preloader Styles */
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    bottom: 0;
+    background-color: var(--bg-white, #FFFFFF);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10000;
+    padding-top: env(safe-area-inset-top);
+    transition: opacity 0.8s ease, visibility 0.8s ease;
 }
 
-@font-face {
-    font-family: 'Elms Sans';
-    src: url('fonts/ElmsSans-Italic-VariableFont.ttf') format('truetype-variations');
-    font-weight: 100 900;
-    font-style: italic;
-    font-display: swap;
+.preloader.fade-out {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.preloader-content {
+    text-align: center;
+}
+
+.preloader-initials {
+    font-family: 'Lora', serif;
+    font-size: clamp(3rem, 8vw, 5rem);
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    color: var(--accent, #1a3a52);
+    animation: fadeInOut 2s ease-in-out infinite;
+}
+
+@keyframes fadeInOut {
+    0%, 100% {
+        opacity: 0.3;
+    }
+    50% {
+        opacity: 1;
+    }
 }
 
 /* Reset & Base Styles */
@@ -23,8 +49,8 @@
 }
 
 :root {
-    /* Schwarz-Weiß Palette */
-    --accent: #000000;       /* Schwarz */
+    /* Warme moderne Palette */
+    --accent: #1a3a52;       /* Tiefes Navy-Blau */
     --text-dark: #000000;    /* Schwarz */
     --text-light: #666666;   /* Mittelgrau */
     --bg-white: #FFFFFF;     /* Weiß */
@@ -45,16 +71,32 @@
 }
 
 body {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Lato', sans-serif;
     color: var(--text-dark);
     line-height: 1.7;
-    background-color: var(--bg-white);
     font-weight: 300;
     letter-spacing: 0.01em;
+    position: relative;
+}
+
+/* Subtile Analog-Textur für digitalen Glanz-Bruch */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('assets/grain-texture.svg');
+    background-repeat: repeat;
+    background-size: 200px 200px;
+    opacity: 0.035;
+    pointer-events: none;
+    z-index: 9999;
 }
 
 h1, h2, h3 {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Lora', serif;
     font-weight: 400;
     letter-spacing: 0.02em;
     line-height: 1.3;
@@ -66,68 +108,82 @@ h1, h2, h3 {
     padding: 0 20px;
 }
 
-/* Language Switcher - Modern Glass Morphism */
+/* ============================================
+   UNIFIED GLASS BUTTON STANDARD
+   ============================================ */
+
+/* Base Glass Button - Reusable Standard */
+.btn-glass-standard {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 12px;
+    background: rgba(0, 0, 0, 0.3);
+    color: #FFFFFF;
+    text-decoration: none;
+    font-family: 'Lato', sans-serif;
+    font-size: clamp(0.8rem, 1.8vw, 0.9rem);
+    font-weight: 400;
+    letter-spacing: 0.03em;
+    border-radius: 6px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+}
+
+.btn-glass-standard:hover {
+    background: rgba(0, 0, 0, 0.45);
+    color: #FFFFFF;
+    border-color: rgba(255, 255, 255, 0.4);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Language Switcher Container */
 .language-switcher {
     position: fixed;
-    top: 30px;
+    top: calc(30px + env(safe-area-inset-top));
     right: 30px;
     z-index: 1000;
     display: flex;
     gap: 6px;
-    background: rgba(255, 255, 255, 0.72);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    padding: 8px;
-    border-radius: 50px;
-    box-shadow:
-        0 2px 8px rgba(0, 0, 0, 0.04),
-        0 8px 24px rgba(0, 0, 0, 0.08);
-    border: 1px solid rgba(255, 255, 255, 0.5);
 }
 
+/* Language Buttons - Using Glass Standard */
 .lang-btn {
-    background: transparent;
-    border: 1.5px solid rgba(110, 110, 115, 0.2);
-    color: var(--text-light);
     padding: 8px 14px;
-    border-radius: 50px;
-    cursor: pointer;
-    font-family: 'Elms Sans', sans-serif;
     font-size: 12px;
     font-weight: 600;
     letter-spacing: 0.5px;
-    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.lang-btn:hover {
-    background: var(--primary-color);
-    color: var(--bg-white);
-    border-color: var(--primary-color);
-    transform: translateY(-1px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
 .lang-btn.active {
-    background: transparent;
-    color: var(--primary-color);
-    border-color: var(--primary-color);
-    box-shadow: 0 4px 12px rgba(28, 28, 30, 0.2);
+    background: #FFFFFF;
+    color: #000000;
+    border-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
 }
 
 /* Hero Section - Fullscreen with Tint */
 .hero {
     position: relative;
-    height: 100vh;
+    height: 100svh;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: flex-end;
+    justify-content: flex-start;
     overflow: hidden;
 }
 
 .hero-content {
     position: relative;
-    text-align: center;
+    text-align: left;
     z-index: 2;
+    padding: 0 0 10vh 5vw;
 }
 
 .hero-background {
@@ -139,9 +195,11 @@ h1, h2, h3 {
     background-image: url('hero.jpg');
     background-size: cover;
     background-position: center 30%;
-    transform: scale(1.03);
-    filter: blur(3px);
+    filter: none;
     z-index: 0;
+    will-change: transform;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
 }
 
 .hero-overlay {
@@ -151,7 +209,7 @@ h1, h2, h3 {
     right: 0;
     bottom: 0;
     z-index: 1;
-    background: linear-gradient(135deg, rgba(0, 0, 0, 0.45) 0%, rgba(0, 0, 0, 0.25) 100%);
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.08) 0%, rgba(0, 0, 0, 0.05) 100%);
 }
 
 .hero-title {
@@ -164,10 +222,10 @@ h1, h2, h3 {
 .hero-date {
     font-size: clamp(1.25rem, 3vw, 1.75rem);
     font-weight: 400;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Lato', sans-serif;
     letter-spacing: 0.15em;
     margin-bottom: 15px;
-    color: var(--primary-color);
+    color: rgba(255, 255, 255, 0.95);
     text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
 }
 
@@ -176,8 +234,23 @@ h1, h2, h3 {
     color: rgba(255, 255, 255, 0.95);
     font-weight: 400;
     letter-spacing: 0.08em;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Lato', sans-serif;
     text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* Calendar Button - Using Glass Standard */
+.calendar-button {
+    margin-top: 15px;
+}
+
+.calendar-button svg {
+    width: 16px;
+    height: 16px;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.calendar-button:hover svg {
+    transform: scale(1.05);
 }
 
 /* Section Styles */
@@ -194,6 +267,7 @@ section {
     font-weight: 500;
     position: relative;
     padding-bottom: 1rem;
+    z-index: 1;
 }
 
 .section-title::after {
@@ -210,6 +284,22 @@ section {
 /* Personal Message Section */
 .personal-message {
     background: var(--bg-white);
+    position: relative;
+}
+
+.personal-message::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('assets/grain-texture.svg');
+    background-repeat: repeat;
+    background-size: 180px 180px;
+    opacity: 0.025;
+    pointer-events: none;
+    z-index: 0;
 }
 
 .message-content {
@@ -220,6 +310,8 @@ section {
     line-height: 2;
     color: var(--text-light);
     font-weight: 400;
+    position: relative;
+    z-index: 1;
 }
 
 .message-content p {
@@ -247,6 +339,22 @@ section {
 /* Timeline Section */
 .timeline {
     background: var(--bg-light);
+    position: relative;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('assets/grain-texture.svg');
+    background-repeat: repeat;
+    background-size: 180px 180px;
+    opacity: 0.03;
+    pointer-events: none;
+    z-index: 0;
 }
 
 .timeline-grid {
@@ -256,6 +364,7 @@ section {
     max-width: 700px;
     margin: 0 auto;
     position: relative;
+    z-index: 1;
 }
 
 .timeline-grid::before {
@@ -272,6 +381,17 @@ section {
     text-align: left;
     padding: 1rem 0 1rem 70px;
     position: relative;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+    border-radius: 8px;
+    margin-left: -10px;
+    padding-left: 80px;
+}
+
+.timeline-item:hover {
+    transform: translateY(-3px);
+    background: rgba(26, 58, 82, 0.03);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
 }
 
 .timeline-item::before {
@@ -288,7 +408,7 @@ section {
 
 .timeline-time {
     font-size: 1.25rem;
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Lato', sans-serif;
     text-transform: uppercase;
     color: var(--text-dark);
     font-weight: 600;
@@ -308,16 +428,43 @@ section {
 /* FAQ Section */
 .faq {
     background: var(--bg-white);
+    position: relative;
+}
+
+.faq::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('assets/grain-texture.svg');
+    background-repeat: repeat;
+    background-size: 180px 180px;
+    opacity: 0.025;
+    pointer-events: none;
+    z-index: 0;
 }
 
 .faq-container {
     max-width: 800px;
     margin: 0 auto;
+    position: relative;
+    z-index: 1;
 }
 
 .faq-item {
     border-bottom: 1px solid var(--smoke);
-    transition: all 0.3s ease;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border-radius: 8px;
+    padding: 0 15px;
+    margin: 0 -15px;
+}
+
+.faq-item:hover {
+    background: rgba(26, 58, 82, 0.02);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
 }
 
 .faq-item:last-child {
@@ -334,7 +481,7 @@ section {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Lato', sans-serif;
     font-size: 1.15rem;
     color: var(--text-dark);
     font-weight: 500;
@@ -466,6 +613,10 @@ html {
     animation-delay: 0.7s;
 }
 
+.calendar-button {
+    animation-delay: 0.9s;
+}
+
 /* Scroll Reveal Animation */
 @keyframes scrollReveal {
     from {
@@ -500,12 +651,30 @@ html {
 /* Anfahrt Section */
 .anfahrt {
     background: var(--bg-light);
+    position: relative;
+}
+
+.anfahrt::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('assets/grain-texture.svg');
+    background-repeat: repeat;
+    background-size: 180px 180px;
+    opacity: 0.03;
+    pointer-events: none;
+    z-index: 0;
 }
 
 .anfahrt-content {
     text-align: center;
     max-width: 600px;
     margin: 0 auto;
+    position: relative;
+    z-index: 1;
 }
 
 .anfahrt-content p {
@@ -522,4 +691,131 @@ html {
     border: 0;
     border-radius: 16px;
     margin-top: 1.5rem;
+}
+
+/* Handwritten Signature */
+.signature {
+    font-family: 'Dancing Script', cursive;
+    font-size: clamp(2rem, 5vw, 2.8rem);
+    color: var(--primary-color);
+    font-weight: 400;
+    display: inline-block;
+    margin-top: 0.5rem;
+    line-height: 1.2;
+}
+
+/* Countdown Section */
+.countdown {
+    background: var(--bg-light);
+    position: relative;
+    padding: clamp(4rem, 12vw, 6rem) 20px;
+}
+
+.countdown::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('assets/grain-texture.svg');
+    background-repeat: repeat;
+    background-size: 180px 180px;
+    opacity: 0.03;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.countdown-timer {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    flex-wrap: nowrap;
+    gap: 1.5rem;
+    max-width: 100%;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+    padding: 0 20px;
+}
+
+.countdown-item {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 0.5rem;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.countdown-item:hover {
+    transform: scale(1.05);
+}
+
+.countdown-item:not(:last-child)::after {
+    content: '•';
+    margin-left: clamp(0.75rem, 2vw, 1.5rem);
+    color: var(--text-light);
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    opacity: 0.4;
+}
+
+.countdown-number {
+    font-family: 'Lato', sans-serif;
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    font-weight: 700;
+    color: var(--primary-color);
+    line-height: 1;
+    letter-spacing: -0.02em;
+}
+
+.countdown-label {
+    font-family: 'Lora', serif;
+    font-size: clamp(0.9rem, 2vw, 1.1rem);
+    color: var(--text-light);
+    text-transform: lowercase;
+    letter-spacing: 0.05em;
+    font-weight: 400;
+}
+
+.countdown-finished {
+    font-family: 'Lora', serif;
+    font-size: clamp(2rem, 5vw, 3rem);
+    color: var(--primary-color);
+    text-align: center;
+    padding: 3rem 2rem;
+    font-weight: 500;
+}
+
+/* Countdown animation */
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+.countdown-number {
+    animation: pulse 2s ease-in-out infinite;
+}
+
+/* Responsive for countdown */
+@media (max-width: 768px) {
+    .countdown-timer {
+        flex-wrap: wrap;
+        gap: 1rem;
+        justify-content: space-around;
+    }
+
+    .countdown-item:not(:last-child)::after {
+        margin-left: clamp(0.5rem, 1.5vw, 1rem);
+    }
+
+    .countdown-number {
+        font-size: 2rem;
+    }
+
+    .countdown-label {
+        font-size: 0.8rem;
+    }
 }

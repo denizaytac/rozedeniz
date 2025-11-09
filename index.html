@@ -2,19 +2,43 @@
 <html lang="de">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>Roze & Deniz - 23.05.2026</title>
+
+    <!-- Open Graph Meta Tags für Social Media Previews -->
+    <meta property="og:title" content="Save the Date: Roze & Deniz heiraten! | 23.05.2026" />
+    <meta property="og:description" content="Wir laden dich ein! Feiere mit uns unsere Hochzeit in der Rohrmeisterei Schwerte." />
+    <meta property="og:image" content="https://rozedeniz.netlify.app/images/social-preview.jpg" />
+    <meta property="og:url" content="https://rozedeniz.netlify.app" />
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Save the Date: Roze & Deniz heiraten! | 23.05.2026" />
+    <meta name="twitter:description" content="Wir laden dich ein! Feiere mit uns unsere Hochzeit in der Rohrmeisterei Schwerte." />
+    <meta name="twitter:image" content="https://rozedeniz.netlify.app/images/social-preview.jpg" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&family=Lora:wght@400;700&family=Dancing+Script:wght@400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Preloader -->
+    <div class="preloader" id="preloader">
+        <div class="preloader-content">
+            <div class="preloader-initials">R & D</div>
+        </div>
+    </div>
+
     <!-- Language Switcher -->
     <div class="language-switcher">
-        <button class="lang-btn active" data-lang="de">DE</button>
-        <button class="lang-btn" data-lang="tr">TR</button>
-        <button class="lang-btn" data-lang="za">ZA</button>
+        <button class="btn-glass-standard lang-btn active" data-lang="de">DE</button>
+        <button class="btn-glass-standard lang-btn" data-lang="tr">TR</button>
+        <button class="btn-glass-standard lang-btn" data-lang="za">ZA</button>
     </div>
 
     <!-- Hero Section -->
@@ -25,6 +49,40 @@
             <h1 class="hero-title">Roze & Deniz</h1>
             <div class="hero-date">23.05.2026</div>
             <div class="hero-location" data-i18n="hero.location">Rohrmeisterei, Schwerte</div>
+            <a href="hochzeit-roze-deniz.ics" class="btn-glass-standard calendar-button" download>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                    <line x1="16" y1="2" x2="16" y2="6"></line>
+                    <line x1="8" y1="2" x2="8" y2="6"></line>
+                    <line x1="3" y1="10" x2="21" y2="10"></line>
+                </svg>
+                <span data-i18n="hero.addToCalendar">Zum Kalender hinzufügen</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- Countdown Section -->
+    <section class="countdown" id="countdown">
+        <div class="container">
+            <h2 class="section-title" data-i18n="countdown.title">Countdown bis zur Hochzeit</h2>
+            <div class="countdown-timer">
+                <div class="countdown-item">
+                    <div class="countdown-number" id="days">0</div>
+                    <div class="countdown-label" data-i18n="countdown.days">Tage</div>
+                </div>
+                <div class="countdown-item">
+                    <div class="countdown-number" id="hours">0</div>
+                    <div class="countdown-label" data-i18n="countdown.hours">Stunden</div>
+                </div>
+                <div class="countdown-item">
+                    <div class="countdown-number" id="minutes">0</div>
+                    <div class="countdown-label" data-i18n="countdown.minutes">Minuten</div>
+                </div>
+                <div class="countdown-item">
+                    <div class="countdown-number" id="seconds">0</div>
+                    <div class="countdown-label" data-i18n="countdown.seconds">Sekunden</div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -36,7 +94,7 @@
                 <p>Liebe Familie und Freunde,</p>
                 <p>Wir freuen uns sehr, diesen besonderen Tag mit euch zu teilen. Es bedeutet uns die Welt, dass ihr Teil unserer Geschichte seid.</p>
                 <p>Feiert mit uns Liebe, Lachen und den Beginn eines neuen Kapitels.</p>
-                <p>Mit Liebe,<br>Roze & Deniz</p>
+                <p class="signature">Mit Liebe,<br>Roze & Deniz</p>
             </div>
         </div>
     </section>
@@ -83,7 +141,7 @@
                     Rohrmeisterei Schwerte<br>
                     Ruhrstraße 20, 58239 Schwerte
                 </p>
-                <iframe src="https://maps.google.com/maps?q=Rohrmeisterei+Schwerte,+Ruhrstraße+20,+58239+Schwerte&t=&z=15&ie=UTF8&iwloc=&output=embed" width="600" height="450" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2487.1271898457567!2d7.5678721130795426!3d51.43745801569176!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47b93e1d11647903%3A0xab384119601c16dc!2sRohrmeisterei%20Schwerte!5e0!3m2!1sde!2sde!4v1762643863419!5m2!1sde!2sde" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </div>
     </section>

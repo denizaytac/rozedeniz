@@ -1,13 +1,122 @@
+// Preloader - Load critical assets before showing page
+(function() {
+    const preloader = document.getElementById('preloader');
+
+    // Track loaded assets
+    let fontsLoaded = false;
+    let heroImageLoaded = false;
+
+    // Check if all critical assets are loaded
+    function checkAllAssetsLoaded() {
+        if (fontsLoaded && heroImageLoaded) {
+            // Add a small delay for better UX (minimum 800ms to see the preloader)
+            setTimeout(() => {
+                preloader.classList.add('fade-out');
+                // Remove from DOM after fade out animation completes
+                setTimeout(() => {
+                    preloader.style.display = 'none';
+                }, 800);
+            }, 800);
+        }
+    }
+
+    // Load hero image
+    const heroImage = new Image();
+    heroImage.onload = function() {
+        heroImageLoaded = true;
+        checkAllAssetsLoaded();
+    };
+    heroImage.onerror = function() {
+        // If image fails to load, still hide preloader
+        heroImageLoaded = true;
+        checkAllAssetsLoaded();
+    };
+    heroImage.src = 'hero.jpg';
+
+    // Check if fonts are loaded
+    if (document.fonts && document.fonts.ready) {
+        document.fonts.ready.then(function() {
+            fontsLoaded = true;
+            checkAllAssetsLoaded();
+        });
+    } else {
+        // Fallback if Font Loading API is not supported
+        setTimeout(function() {
+            fontsLoaded = true;
+            checkAllAssetsLoaded();
+        }, 1000);
+    }
+
+    // Fallback: Hide preloader after max 5 seconds regardless
+    setTimeout(function() {
+        if (!preloader.classList.contains('fade-out')) {
+            preloader.classList.add('fade-out');
+            setTimeout(() => {
+                preloader.style.display = 'none';
+            }, 800);
+        }
+    }, 5000);
+})();
+
+// Wedding Countdown
+// Set the wedding date (May 23, 2026 at 17:00)
+const weddingDate = new Date("May 23, 2026 17:00:00").getTime();
+
+function updateCountdown() {
+    // Get current time
+    const now = new Date().getTime();
+
+    // Calculate time difference
+    const timeRemaining = weddingDate - now;
+
+    // Calculate days, hours, minutes, and seconds
+    const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+
+    // Update the DOM elements
+    const daysElement = document.getElementById("days");
+    const hoursElement = document.getElementById("hours");
+    const minutesElement = document.getElementById("minutes");
+    const secondsElement = document.getElementById("seconds");
+
+    if (daysElement) daysElement.innerHTML = days >= 0 ? days : 0;
+    if (hoursElement) hoursElement.innerHTML = hours >= 0 ? hours : 0;
+    if (minutesElement) minutesElement.innerHTML = minutes >= 0 ? minutes : 0;
+    if (secondsElement) secondsElement.innerHTML = seconds >= 0 ? seconds : 0;
+
+    // If countdown is finished, display a message
+    if (timeRemaining < 0) {
+        const countdownSection = document.querySelector('.countdown-timer');
+        if (countdownSection) {
+            countdownSection.innerHTML = '<div class="countdown-finished">Der große Tag ist da! 🎉</div>';
+        }
+    }
+}
+
+// Update countdown every second
+setInterval(updateCountdown, 1000);
+
+// Initial call to display countdown immediately
+updateCountdown();
+
 // Translation data
 const translations = {
     de: {
         'hero.location': 'Rohrmeisterei, Schwerte',
+        'hero.addToCalendar': 'Zum Kalender hinzufügen',
+        'countdown.title': 'Countdown bis zur Hochzeit',
+        'countdown.days': 'Tage',
+        'countdown.hours': 'Stunden',
+        'countdown.minutes': 'Minuten',
+        'countdown.seconds': 'Sekunden',
         'message.title': 'Unsere Einladung',
         'message.content': `
             <p>Liebe Familie und Freunde,</p>
             <p>Wir freuen uns sehr, diesen besonderen Tag mit euch zu teilen. Es bedeutet uns die Welt, dass ihr Teil unserer Geschichte seid.</p>
             <p>Feiert mit uns Liebe, Lachen und den Beginn eines neuen Kapitels.</p>
-            <p>Mit Liebe,<br>Roze & Deniz</p>
+            <p>Mit Liebe,<br><span class="signature">Roze & Deniz</span></p>
         `,
         'timeline.title': 'Programmablauf',
         'timeline.reception': 'Sektempfang',
@@ -30,16 +139,34 @@ const translations = {
         'faq.q6': 'Bis wann muss ich zusagen?',
         'faq.a6': 'Bitte gebt uns bis zum 01.04.2026 Bescheid, ob ihr dabei sein könnt.',
         'anfahrt.title': 'Anfahrt',
-        'anfahrt.address': 'Rohrmeisterei Schwerte<br>Ruhrstraße 20, 58239 Schwerte'
+        'anfahrt.address': 'Rohrmeisterei Schwerte<br>Ruhrstraße 20, 58239 Schwerte',
+        'accommodation.title': 'Übernachtung & Taxi',
+        'accommodation.hotels.title': 'Hotelempfehlungen',
+        'accommodation.hotels.intro': 'Für eure Übernachtung empfehlen wir folgende Hotels in der Nähe:',
+        'accommodation.hotel1.name': 'Hotel Reichshof',
+        'accommodation.hotel1.address': 'Bahnhofstr. 32, 58239 Schwerte',
+        'accommodation.hotel2.name': 'Breer\'s Hotel',
+        'accommodation.hotel2.address': 'Reichshofstr. 104, 58239 Schwerte',
+        'accommodation.hotel3.name': 'Hotel Menzebach - Olympia',
+        'accommodation.hotel3.address': 'Ostenstr. 23, 58239 Schwerte',
+        'accommodation.phone': 'Telefon:',
+        'accommodation.taxi.title': 'Taxi-Dienste',
+        'accommodation.taxi.intro': 'Für eure Fahrt zur Location oder zurück zum Hotel stehen euch folgende Taxi-Dienste zur Verfügung:'
     },
     tr: {
         'hero.location': 'Rohrmeisterei, Schwerte',
+        'hero.addToCalendar': 'Takvime Ekle',
+        'countdown.title': 'Düğüne Geri Sayım',
+        'countdown.days': 'Gün',
+        'countdown.hours': 'Saat',
+        'countdown.minutes': 'Dakika',
+        'countdown.seconds': 'Saniye',
         'message.title': 'Davetimiz',
         'message.content': `
             <p>Sevgili Ailemiz ve Arkadaşlarımız,</p>
             <p>Bu özel günü sizlerle paylaşmaktan çok mutluyuz. Hikayemizin bir parçası olmanız bizim için çok değerli.</p>
             <p>Aşkı, kahkahayı ve yeni bir bölümün başlangıcını bizimle kutlayın.</p>
-            <p>Sevgiyle,<br>Roze & Deniz</p>
+            <p>Sevgiyle,<br><span class="signature">Roze & Deniz</span></p>
         `,
         'timeline.title': 'Program Akışı',
         'timeline.reception': 'Şampanya İkramı',
@@ -62,16 +189,34 @@ const translations = {
         'faq.q6': 'Ne zamana kadar onay vermem gerekiyor?',
         'faq.a6': 'Lütfen 01.04.2026 tarihine kadar katılıp katılamayacağınızı bize bildirin.',
         'anfahrt.title': 'Yol Tarifi',
-        'anfahrt.address': 'Rohrmeisterei Schwerte<br>Ruhrstraße 20, 58239 Schwerte'
+        'anfahrt.address': 'Rohrmeisterei Schwerte<br>Ruhrstraße 20, 58239 Schwerte',
+        'accommodation.title': 'Konaklama & Taksi',
+        'accommodation.hotels.title': 'Otel Önerileri',
+        'accommodation.hotels.intro': 'Konaklamanız için yakındaki şu otelleri öneriyoruz:',
+        'accommodation.hotel1.name': 'Hotel Reichshof',
+        'accommodation.hotel1.address': 'Bahnhofstr. 32, 58239 Schwerte',
+        'accommodation.hotel2.name': 'Breer\'s Hotel',
+        'accommodation.hotel2.address': 'Reichshofstr. 104, 58239 Schwerte',
+        'accommodation.hotel3.name': 'Hotel Menzebach - Olympia',
+        'accommodation.hotel3.address': 'Ostenstr. 23, 58239 Schwerte',
+        'accommodation.phone': 'Telefon:',
+        'accommodation.taxi.title': 'Taksi Hizmetleri',
+        'accommodation.taxi.intro': 'Mekana veya otele dönüş için aşağıdaki taksi hizmetlerinden yararlanabilirsiniz:'
     },
     za: {
         'hero.location': 'Rohrmeisterei, Schwerte',
+        'hero.addToCalendar': 'Bicî Takvîmî',
+        'countdown.title': 'Hejmara Rojan Heta Dawetê',
+        'countdown.days': 'Roj',
+        'countdown.hours': 'Sehat',
+        'countdown.minutes': 'Deqîqe',
+        'countdown.seconds': 'Sanîye',
         'message.title': 'Daweta Ma',
         'message.content': `
             <p>Famîlya û hevalên azîz,</p>
             <p>Ma zaf şa bîme ke ena roja xusûsî ya xo bi şima ra parvaz bikerîme. Şima ke beşêk ji dîroka ma ye, şima rê ma zaf girîng ê.</p>
             <p>Heznayîş, hênayîş û destpêka beşêk neweyî bi ma ra şadî bikerê.</p>
-            <p>Bi heznayîş,<br>Roze û Deniz</p>
+            <p>Bi heznayîş,<br><span class="signature">Roze û Deniz</span></p>
         `,
         'timeline.title': 'Programa Rojê',
         'timeline.reception': 'Pêşwazîya Şampanya',
@@ -94,7 +239,19 @@ const translations = {
         'faq.q6': 'Ez gani heta key qayîl bikerê?',
         'faq.a6': 'Keremê bike heta 01.04.2026 ma rê vajê ke şima eşkeni bêrê yan ney.',
         'anfahrt.title': 'Raya Ameyîşî',
-        'anfahrt.address': 'Rohrmeisterei Schwerte<br>Ruhrstraße 20, 58239 Schwerte'
+        'anfahrt.address': 'Rohrmeisterei Schwerte<br>Ruhrstraße 20, 58239 Schwerte',
+        'accommodation.title': 'Werzayîş û Taksî',
+        'accommodation.hotels.title': 'Tavsîyeyê Hotelî',
+        'accommodation.hotels.intro': 'Qerarê şima rê ma ney hotelê nêzdîyan tavsîye kenîme:',
+        'accommodation.hotel1.name': 'Hotel Reichshof',
+        'accommodation.hotel1.address': 'Bahnhofstr. 32, 58239 Schwerte',
+        'accommodation.hotel2.name': 'Breer\'s Hotel',
+        'accommodation.hotel2.address': 'Reichshofstr. 104, 58239 Schwerte',
+        'accommodation.hotel3.name': 'Hotel Menzebach - Olympia',
+        'accommodation.hotel3.address': 'Ostenstr. 23, 58239 Schwerte',
+        'accommodation.phone': 'Telefon:',
+        'accommodation.taxi.title': 'Xizmetê Taksîyan',
+        'accommodation.taxi.intro': 'Raya şima ya rê lokasyon yan zi hotêl rê ney xizmetê taksîyan şima rê amadeyî:'
     }
 };
 
@@ -179,6 +336,47 @@ function initializeFAQAccordion() {
         });
     });
 }
+
+// Parallax Effect for Hero Background
+function initParallax() {
+    const heroBackground = document.querySelector('.hero-background');
+    const hero = document.querySelector('.hero');
+
+    if (!heroBackground || !hero) return;
+
+    let ticking = false;
+
+    function updateParallax() {
+        const scrolled = window.pageYOffset;
+        const heroHeight = hero.offsetHeight;
+
+        // Only apply parallax while hero is visible
+        if (scrolled < heroHeight) {
+            // Move background slower than scroll (0.5 = half speed)
+            const yPos = scrolled * 0.5;
+            heroBackground.style.transform = `translateY(${yPos}px) scale(1.01)`;
+        }
+
+        ticking = false;
+    }
+
+    function requestTick() {
+        if (!ticking) {
+            window.requestAnimationFrame(updateParallax);
+            ticking = true;
+        }
+    }
+
+    window.addEventListener('scroll', requestTick, { passive: true });
+
+    // Initial call
+    updateParallax();
+}
+
+// Initialize parallax on page load
+document.addEventListener('DOMContentLoaded', function() {
+    initParallax();
+});
 
 // Smooth scroll for any future navigation links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
