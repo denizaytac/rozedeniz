@@ -161,9 +161,12 @@ h1, h2, h3 {
 }
 
 .lang-btn.active {
-    background: rgba(255, 255, 255, 0.35);
+    background: #FFFFFF;
+    color: #000000;
     border-color: rgba(255, 255, 255, 0.5);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
 }
 
 /* Hero Section - Fullscreen with Tint */
