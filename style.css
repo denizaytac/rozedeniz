@@ -128,32 +128,35 @@ h1, h2, h3 {
 }
 
 .lang-btn {
-    background: transparent;
-    border: 1.5px solid rgba(110, 110, 115, 0.2);
-    color: var(--text-light);
+    background: rgba(26, 58, 82, 0.08);
+    border: 1px solid rgba(26, 58, 82, 0.15);
+    color: var(--text-dark);
     padding: 8px 14px;
-    border-radius: 50px;
+    border-radius: 6px;
     cursor: pointer;
     font-family: 'Lato', sans-serif;
     font-size: 12px;
-    font-weight: 600;
-    letter-spacing: 0.5px;
-    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    font-weight: 400;
+    letter-spacing: 0.03em;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .lang-btn:hover {
-    background: var(--primary-color);
-    color: var(--bg-white);
-    border-color: var(--primary-color);
+    background: rgba(26, 58, 82, 0.15);
+    color: var(--text-dark);
+    border-color: rgba(26, 58, 82, 0.25);
     transform: translateY(-1px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 .lang-btn.active {
-    background: transparent;
+    background: rgba(26, 58, 82, 0.12);
     color: var(--primary-color);
-    border-color: var(--primary-color);
-    box-shadow: 0 4px 12px rgba(28, 28, 30, 0.2);
+    border-color: rgba(26, 58, 82, 0.3);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 /* Hero Section - Fullscreen with Tint */
