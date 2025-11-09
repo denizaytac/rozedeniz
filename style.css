@@ -224,43 +224,45 @@ h1, h2, h3 {
     text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
 }
 
-/* Calendar Button */
+/* Calendar Button - Subtle Link Style */
 .calendar-button {
     display: inline-flex;
     align-items: center;
-    gap: 10px;
-    margin-top: 30px;
-    padding: 14px 28px;
-    background: rgba(255, 255, 255, 0.95);
-    color: var(--primary-color);
+    gap: 6px;
+    margin-top: 15px;
+    padding: 8px 12px;
+    background: rgba(255, 255, 255, 0.15);
+    color: rgba(255, 255, 255, 0.9);
     text-decoration: none;
     font-family: 'Lato', sans-serif;
-    font-size: clamp(0.95rem, 2vw, 1.05rem);
-    font-weight: 500;
-    letter-spacing: 0.02em;
-    border-radius: 50px;
-    border: 2px solid rgba(255, 255, 255, 0.9);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    font-size: clamp(0.8rem, 1.8vw, 0.9rem);
+    font-weight: 400;
+    letter-spacing: 0.03em;
+    border-radius: 6px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     cursor: pointer;
 }
 
 .calendar-button:hover {
-    background: var(--primary-color);
-    color: var(--bg-white);
-    border-color: var(--primary-color);
-    transform: translateY(-2px);
-    box-shadow: 0 8px 24px rgba(26, 58, 82, 0.35);
+    background: rgba(255, 255, 255, 0.25);
+    color: rgba(255, 255, 255, 1);
+    border-color: rgba(255, 255, 255, 0.4);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 .calendar-button svg {
-    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    width: 16px;
+    height: 16px;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .calendar-button:hover svg {
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 /* Section Styles */
