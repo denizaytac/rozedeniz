@@ -192,8 +192,8 @@ h1, h2, h3 {
     left: 0;
     right: 0;
     bottom: 0;
-    /* Mobile First: Standard-Bild für Handys laden */
-    background-image: url('hero-small.webp');
+    /* Verwende nur high-quality hero-large für alle Geräte */
+    background-image: url('hero-large.webp');
     background-size: cover;
     background-position: center 30%;
     filter: none;
@@ -201,20 +201,6 @@ h1, h2, h3 {
     will-change: transform;
     backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
-}
-
-/* Tablet-Größe */
-@media (min-width: 768px) {
-    .hero-background {
-        background-image: url('hero-medium.webp');
-    }
-}
-
-/* Desktop-Größe */
-@media (min-width: 1280px) {
-    .hero-background {
-        background-image: url('hero-large.webp');
-    }
 }
 
 .hero-overlay {
