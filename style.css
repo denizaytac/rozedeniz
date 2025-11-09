@@ -4,12 +4,13 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 100svh;
     background-color: var(--bg-white, #FFFFFF);
     display: flex;
     align-items: center;
     justify-content: center;
     z-index: 10000;
+    padding-top: env(safe-area-inset-top);
     transition: opacity 0.8s ease, visibility 0.8s ease;
 }
 
@@ -145,7 +146,7 @@ h1, h2, h3 {
 /* Language Switcher Container */
 .language-switcher {
     position: fixed;
-    top: 30px;
+    top: calc(30px + env(safe-area-inset-top));
     right: 30px;
     z-index: 1000;
     display: flex;
@@ -172,7 +173,7 @@ h1, h2, h3 {
 /* Hero Section - Fullscreen with Tint */
 .hero {
     position: relative;
-    height: 100vh;
+    height: 100svh;
     display: flex;
     align-items: flex-end;
     justify-content: flex-start;
