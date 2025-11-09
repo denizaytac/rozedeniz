@@ -161,15 +161,16 @@ h1, h2, h3 {
     position: relative;
     height: 100vh;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: flex-end;
+    justify-content: flex-start;
     overflow: hidden;
 }
 
 .hero-content {
     position: relative;
-    text-align: center;
+    text-align: left;
     z-index: 2;
+    padding: 0 0 10vh 5vw;
 }
 
 .hero-background {
