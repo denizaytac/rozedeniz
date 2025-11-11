@@ -885,3 +885,21 @@ html {
         font-size: 0.8rem;
     }
 }
+
+/* NEUES GRUPPENFOTO */
+.group-photo-section {
+    padding-top: 0;
+    padding-bottom: 0;
+    background: var(--bg-white); /* Passt zur FAQ Sektion */
+}
+.group-photo-wrapper {
+    max-width: 800px; /* Passt zur FAQ Breite */
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+.group-photo-wrapper img {
+    width: 100%;
+    border-radius: 16px; /* Weichere Kanten */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+}
