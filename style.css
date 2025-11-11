@@ -413,35 +413,45 @@ section {
     z-index: 0;
 }
 
-.timeline-grid {
-    display: flex;
-    flex-direction: column;
-    gap: 0;
+/* Timeline List Container */
+.timeline-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
     max-width: 700px;
     margin: 0 auto;
     position: relative;
     z-index: 1;
+    padding-left: 60px; /* Platz für Linie und Marker */
 }
 
-.timeline-grid::before {
+/* Durchgehende vertikale Linie */
+.timeline-list::before {
     content: '';
     position: absolute;
-    top: 20px;
-    bottom: 20px;
-    left: 30.5px;
-    width: 3px;
+    top: 15px;
+    bottom: 15px;
+    left: 18px; /* Horizontal zentriert zur Linie */
+    width: 2px;
     background-color: var(--smoke);
+    z-index: 0;
 }
 
+/* Timeline Item */
 .timeline-item {
-    text-align: left;
-    padding: 1rem 0 1rem 70px;
     position: relative;
+    margin-bottom: 30px;
+    padding: 12px 0;
+    display: grid;
+    grid-template-columns: 80px 1fr; /* Feste Spalte für Zeit, flexible für Event */
+    align-items: center;
+    gap: 20px;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     cursor: pointer;
     border-radius: 8px;
-    margin-left: -10px;
-    padding-left: 80px;
+    padding-left: 15px;
+    margin-left: -15px;
+    padding-right: 15px;
 }
 
 .timeline-item:hover {
@@ -450,20 +460,23 @@ section {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
 }
 
+/* Kreisförmiger Marker - perfekt zentriert auf der Linie */
 .timeline-item::before {
     content: '';
     position: absolute;
-    left: 25px;
+    left: -51px; /* Position relativ zum Item */
     top: 50%;
     transform: translateY(-50%);
-    width: 14px;
-    height: 14px;
+    width: 18px;
+    height: 18px;
     border-radius: 50%;
     background-color: var(--bg-white);
     border: 3px solid var(--primary-color);
     box-shadow: 0 0 0 4px var(--bg-white);
+    z-index: 1;
 }
 
+/* Zeitangabe */
 .timeline-time {
     font-size: 1.25rem;
     font-family: 'Lato', sans-serif;
@@ -471,16 +484,24 @@ section {
     color: var(--text-dark);
     font-weight: 600;
     letter-spacing: 0.02em;
-    display: inline-block;
-    margin-right: 1rem;
 }
 
+/* Event-Beschreibung */
 .timeline-event {
     font-size: clamp(1rem, 2.5vw, 1.15rem);
     color: var(--text-dark);
     font-weight: 500;
     letter-spacing: 0.01em;
-    display: inline-block;
+}
+
+/* Placeholder-Styling für "Informationen folgen" */
+.timeline-item.placeholder .timeline-event {
+    color: #888888;
+    font-style: italic;
+}
+
+.timeline-item.placeholder .timeline-time {
+    color: #888888;
 }
 
 /* FAQ Section */
