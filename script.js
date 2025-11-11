@@ -118,6 +118,7 @@ const translations = {
             <p>Feiert mit uns Liebe, Lachen und den Beginn eines neuen Kapitels.</p>
             <p>Mit Liebe,<br><span class="signature">Roze & Deniz</span></p>
         `,
+        'gallery.title': 'Momente unserer Trauung',
         'rsvp.title': 'Gebt uns Bescheid!',
         'rsvp.text': 'Wir bitten um eure Rückmeldung bis spätestens Ende Februar 2026. Das hilft uns enorm bei der weiteren Planung.',
         'rsvp.button': 'Zur Zusage',
@@ -167,6 +168,7 @@ const translations = {
             <p>Aşkı, kahkahayı ve yeni bir bölümün başlangıcını bizimle kutlayın.</p>
             <p>Sevgiyle,<br><span class="signature">Roze & Deniz</span></p>
         `,
+        'gallery.title': 'Nikahımızdan Anlar',
         'rsvp.title': 'Bize Haber Verin!',
         'rsvp.text': 'Lütfen en geç Şubat 2026 sonuna kadar geri bildiriminizi bekliyoruz. Bu, planlamada bize çok yardımcı oluyor.',
         'rsvp.button': 'Onay İçin',
@@ -214,8 +216,9 @@ const translations = {
             <p>Famîlya û hevalên azîz,</p>
             <p>Ma zaf şa bîme ke ena roja xusûsî ya xo bi şima ra parvaz bikerîme. Şima ke beşêk ji dîroka ma ye, şima rê ma zaf girîng ê.</p>
             <p>Heznayîş, hênayîş û destpêka beşêk neweyî bi ma ra şadî bikerê.</p>
-            <p>Bi heznayîş,<br><span class="signature">Roze û Deniz</span></p>
+            <p>Bi heznayîš,<br><span class="signature">Roze û Deniz</span></p>
         `,
+        'gallery.title': 'Momente ji Zewaca Ma',
         'rsvp.title': 'Ma Rê Haber Bidê!',
         'rsvp.text': 'Keremê bike heta Şibatê 2026 peyêne ma rê cewab bidê. Na ma rê zaf pela kenena.',
         'rsvp.button': 'Qayîlkerdişî Rê',
