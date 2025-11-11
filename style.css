@@ -394,7 +394,7 @@ section {
 
 /* Timeline Section */
 .timeline {
-    background: var(--bg-light);
+    background: var(--bg-white);
     position: relative;
 }
 
@@ -429,7 +429,7 @@ section {
     top: 20px;
     bottom: 20px;
     left: 30px;
-    width: 2px;
+    width: 3px;
     background-color: var(--smoke);
 }
 
@@ -453,13 +453,15 @@ section {
 .timeline-item::before {
     content: '';
     position: absolute;
-    left: 26px;
+    left: 25px;
     top: 50%;
     transform: translateY(-50%);
-    width: 10px;
-    height: 10px;
+    width: 14px;
+    height: 14px;
     border-radius: 50%;
-    background-color: var(--primary-color);
+    background-color: var(--bg-white);
+    border: 3px solid var(--primary-color);
+    box-shadow: 0 0 0 4px var(--bg-white);
 }
 
 .timeline-time {
