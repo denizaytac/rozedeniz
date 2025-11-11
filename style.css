@@ -196,11 +196,15 @@ h1, h2, h3 {
     background-image: url('hero-main.webp');
     background-size: cover;
     background-position: center 30%;
+    background-repeat: no-repeat;
     filter: none;
     z-index: 0;
-    will-change: transform;
-    backface-visibility: hidden;
-    -webkit-backface-visibility: hidden;
+    /* Optimierte Bildqualität für Fotos */
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: high-quality;
+    -webkit-font-smoothing: antialiased;
+    transform: translate3d(0, 0, 0);
+    -webkit-transform: translate3d(0, 0, 0);
 }
 
 .hero-overlay {
