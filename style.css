@@ -197,7 +197,7 @@ h1, h2, h3 {
     background-size: cover;
     background-position: center 30%;
     background-repeat: no-repeat;
-    filter: none;
+    filter: blur(5px);
     z-index: 0;
     /* Optimierte Bildqualität für Fotos */
     image-rendering: -webkit-optimize-contrast;
