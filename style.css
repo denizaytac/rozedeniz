@@ -428,17 +428,6 @@ section {
     padding-left: 60px; /* Platz für Linie und Marker */
 }
 
-/* Durchgehende vertikale Linie */
-.timeline-list::before {
-    content: '';
-    position: absolute;
-    top: 15px;
-    bottom: 15px;
-    left: 18px; /* Horizontal zentriert zur Linie */
-    width: 2px;
-    background-color: var(--smoke);
-    z-index: 0;
-}
 
 /* Timeline Item */
 .timeline-item {
