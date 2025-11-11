@@ -31,7 +31,7 @@
         heroImageLoaded = true;
         checkAllAssetsLoaded();
     };
-    heroImage.src = 'hero.jpg';
+    heroImage.src = 'hero-main.webp';
 
     // Check if fonts are loaded
     if (document.fonts && document.fonts.ready) {

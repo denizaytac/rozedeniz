@@ -193,7 +193,7 @@ h1, h2, h3 {
     right: 0;
     bottom: 0;
     /* Verwende nur high-quality hero-large für alle Geräte */
-    background-image: url('hero-large.webp');
+    background-image: url('hero-main.webp');
     background-size: cover;
     background-position: center 30%;
     filter: none;
