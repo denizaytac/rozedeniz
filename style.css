@@ -603,7 +603,7 @@ footer p {
 
 /* NEUE BILDERGALERIE */
 .gallery {
-    background: var(--bg-white); /* Passt zur "Personal Message" Sektion */
+    background: var(--bg-dark); /* Dunkler Hintergrund nach der hellen FAQ-Sektion */
     padding-top: 0; /* Weniger Abstand, da es nach der Nachricht kommt */
 }
 .gallery-grid {
