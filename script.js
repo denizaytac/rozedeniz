@@ -170,9 +170,9 @@ const translations = {
         'countdown.minutes': 'Dakika',
         'countdown.seconds': 'Saniye',
         'message.content': `
-            <p>Sevgili Ailemiz, sevgili Herkes,</p>
-            <p>O gün geldi çattı – evleniyoruz! Bu özel günü sizlerle paylaşmaktan büyük mutluluk duyuyoruz.</p>
-            <p>Bu yüzden sizleri, bizimle harika bir gün geçirmeye ve birlikte yeni anılar yaratmaya yürekten davet ediyoruz.</p>
+            <p>Sevgili Ailemiz ve sevgili Dostlarimiz,</p>
+            <p>O gün geldi çattı – evleniyoruz! Bu özel günü sizlerle paylaşacagimiz için büyük mutluluk duyuyoruz.</p>
+            <p>Bu mutlu günümüzde sizleri, bizimle harika bir gün geçirmeye ve birlikte yeni anılar biriktirmeye yürekten davet ediyoruz.</p>
             <p>Sizlerle kadeh kaldırmak ve doyasıya dans etmek için sabırsızlanıyoruz!</p>
             <p>Sevgiyle,<br><span class="signature">Roze & Deniz</span></p>
         `,
