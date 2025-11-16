@@ -111,7 +111,6 @@ const translations = {
         'countdown.hours': 'Stunden',
         'countdown.minutes': 'Minuten',
         'countdown.seconds': 'Sekunden',
-        'message.title': 'Unsere Einladung',
         'message.content': `
             <p>Liebe Familie, liebe Alle,</p>
             <p>es ist so weit – wir heiraten! Wir freuen uns riesig, diesen besonderen Tag mit euch zu teilen.</p>
@@ -169,7 +168,6 @@ const translations = {
         'countdown.hours': 'Saat',
         'countdown.minutes': 'Dakika',
         'countdown.seconds': 'Saniye',
-        'message.title': 'Davetimiz',
         'message.content': `
             <p>Sevgili Ailemiz, sevgili Herkes,</p>
             <p>O gün geldi çattı – evleniyoruz! Bu özel günü sizlerle paylaşmaktan büyük mutluluk duyuyoruz.</p>
@@ -227,7 +225,6 @@ const translations = {
         'countdown.hours': 'Sehat',
         'countdown.minutes': 'Deqîqe',
         'countdown.seconds': 'Sanîye',
-        'message.title': 'Daweta Ma',
         'message.content': `
             <p>Keyeyo delal, her kesê delal,</p>
             <p>A roje ameye – ma zewejîyene! Ma zaf şa bîme ke na roje xusûsî bi şima ra parvaz bikerîme.</p>
