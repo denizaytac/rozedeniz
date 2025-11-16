@@ -140,7 +140,7 @@ const translations = {
         'faq.q3': 'Fotos von der Hochzeit ?',
         'faq.a3': 'Ein Fotograf wird die wichtigsten Momente des Tages festhalten. Die Fotos werden nach der Hochzeit auf dieser Website zu sehen sein. Teilt gerne schon während oder nach der Feier alle eure Handyfotos über eine gemeinsamen Link mit uns. Den QR-Code dazu findet ihr auf Tischkarten bei der Feier.',
         'faq.q4': 'Übernachtungsmöglichkeit',
-        'faq.a4': 'Falls ihr Übernachtungsmöglichkeiten benötigt, haben wir eine kleine Liste mit verschiedenen Hotels rausgesucht. Sagt uns gerne Bescheid.',
+        'faq.a4': 'Falls ihr Übernachtungsmöglichkeiten benötigt, haben wir eine kleine Liste mit verschiedenen Hotels rausgesucht. Wir freuen uns über eure Rückmeldung.',
         'faq.q5': 'Gibt es Parkmöglichkeiten?',
         'faq.a5': 'Ja, es gibt Parkplätze direkt vor der Location. Diese sind für euch bereits reserviert und bezahlt.',
         'faq.q6': 'Darf ich jemanden mitbringen?',
