@@ -387,6 +387,13 @@ section {
     margin-bottom: 2.5rem;
 }
 
+.rsvp-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
 .rsvp-button {
     background: var(--primary-color);
     color: #FFFFFF;
