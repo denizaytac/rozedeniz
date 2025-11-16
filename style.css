@@ -242,30 +242,6 @@ h1, h2, h3 {
     text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
 }
 
-.hero-location .map-link {
-    color: inherit; /* Inherit color from parent */
-    text-decoration: none; /* Remove underline */
-    display: inline-flex; /* Allow icon and text to be inline */
-    align-items: center; /* Vertically align icon and text */
-    gap: 8px; /* Space between text and icon */
-    transition: color 0.3s ease;
-}
-
-.hero-location .map-link:hover {
-    color: rgba(255, 255, 255, 0.8); /* Slightly dim on hover */
-}
-
-.hero-location .map-icon {
-    width: 1.1em; /* Make icon size relative to font size */
-    height: 1.1em;
-    vertical-align: middle; /* Align icon vertically */
-    transition: transform 0.3s ease;
-}
-
-.hero-location .map-link:hover .map-icon {
-    transform: scale(1.1); /* Slightly enlarge icon on hover */
-}
-
 /* Calendar Button - Using Glass Standard */
 .calendar-button-wrapper {
     text-align: center;
