@@ -113,11 +113,13 @@ const translations = {
         'countdown.seconds': 'Sekunden',
         'message.title': 'Unsere Einladung',
         'message.content': `
-            <p>Liebe Familie und Freunde,</p>
-            <p>Wir freuen uns sehr, diesen besonderen Tag mit euch zu teilen. Es bedeutet uns die Welt, dass ihr Teil unserer Geschichte seid.</p>
-            <p>Feiert mit uns Liebe, Lachen und den Beginn eines neuen Kapitels.</p>
-            <p>Mit Liebe,<br><span class="signature">Roze & Deniz</span></p>
+            <p>Liebe Familie, liebe Alle,</p>
+            <p>es ist so weit – wir heiraten! Wir freuen uns riesig, diesen besonderen Tag mit euch zu teilen.</p>
+            <p>Deshalb laden wir euch von Herzen ein, mit uns einen wundervollen Tag zu verbringen und gemeinem neue Erinnerungen zu schaffen.</p>
+            <p>Wir können es kaum erwarten, mit euch anzustoßen und kräftig das Tanzbein zu schwingen!</p>
+            <p>In Liebe,<br><span class="signature">Roze & Deniz</span></p>
         `,
+
         'gallery.title': 'Momente unserer Trauung',
         'rsvp.title': 'Gebt uns Bescheid!',
         'rsvp.text': 'Wir bitten um eure Rückmeldung bis spätestens Ende Februar 2026. Das hilft uns enorm bei der weiteren Planung.',
@@ -169,11 +171,13 @@ const translations = {
         'countdown.seconds': 'Saniye',
         'message.title': 'Davetimiz',
         'message.content': `
-            <p>Sevgili Ailemiz ve Arkadaşlarımız,</p>
-            <p>Bu özel günü sizlerle paylaşmaktan çok mutluyuz. Hikayemizin bir parçası olmanız bizim için çok değerli.</p>
-            <p>Aşkı, kahkahayı ve yeni bir bölümün başlangıcını bizimle kutlayın.</p>
+            <p>Sevgili Ailemiz, sevgili Herkes,</p>
+            <p>O gün geldi çattı – evleniyoruz! Bu özel günü sizlerle paylaşmaktan büyük mutluluk duyuyoruz.</p>
+            <p>Bu yüzden sizleri, bizimle harika bir gün geçirmeye ve birlikte yeni anılar yaratmaya yürekten davet ediyoruz.</p>
+            <p>Sizlerle kadeh kaldırmak ve doyasıya dans etmek için sabırsızlanıyoruz!</p>
             <p>Sevgiyle,<br><span class="signature">Roze & Deniz</span></p>
         `,
+
         'gallery.title': 'Nikahımızdan Anlar',
         'rsvp.title': 'Bize Haber Verin!',
         'rsvp.text': 'Lütfen en geç Şubat 2026 sonuna kadar geri bildiriminizi bekliyoruz. Bu, planlamada bize çok yardımcı oluyor.',
@@ -225,11 +229,13 @@ const translations = {
         'countdown.seconds': 'Sanîye',
         'message.title': 'Daweta Ma',
         'message.content': `
-            <p>Famîlya û hevalên azîz,</p>
-            <p>Ma zaf şa bîme ke ena roja xusûsî ya xo bi şima ra parvaz bikerîme. Şima ke beşêk ji dîroka ma ye, şima rê ma zaf girîng ê.</p>
-            <p>Heznayîş, hênayîş û destpêka beşêk neweyî bi ma ra şadî bikerê.</p>
-            <p>Bi heznayîš,<br><span class="signature">Roze û Deniz</span></p>
+            <p>Keyeyo delal, her kesê delal,</p>
+            <p>A roje ameye – ma zewejîyene! Ma zaf şa bîme ke na roje xusûsî bi şima ra parvaz bikerîme.</p>
+            <p>Coka ma şima rê bi dil û can dawet kenîme ke bi ma ra rojeke rind derbaz bikerê û bi hev ra vîrardişê neweyî virazê.</p>
+            <p>Ma nêeşkenîme sabir bikerîme ke bi şima ra qedeh hewadayîme û govend bikerîme!</p>
+            <p>Bi heznayîş,<br><span class="signature">Roze û Deniz</span></p>
         `,
+
         'gallery.title': 'Momente ji Zewaca Ma',
         'rsvp.title': 'Ma Rê Haber Bidê!',
         'rsvp.text': 'Keremê bike heta Şibatê 2026 peyêne ma rê cewab bidê. Na ma rê zaf pela kenena.',
