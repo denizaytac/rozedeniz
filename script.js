@@ -114,7 +114,7 @@ const translations = {
         'message.content': `
             <p>Liebe Familie, liebe Alle,</p>
             <p>es ist so weit – wir heiraten! Wir freuen uns riesig, diesen besonderen Tag mit euch zu teilen.</p>
-            <p>Deshalb laden wir euch von Herzen ein, mit uns einen wundervollen Tag zu verbringen und gemeinem neue Erinnerungen zu schaffen.</p>
+            <p>Deshalb laden wir euch von Herzen ein, mit uns einen wundervollen Tag zu verbringen und gemeinsame neue Erinnerungen zu schaffen.</p>
             <p>Wir können es kaum erwarten, mit euch anzustoßen und kräftig das Tanzbein zu schwingen!</p>
             <p>In Liebe,<br><span class="signature">Roze & Deniz</span></p>
         `,
