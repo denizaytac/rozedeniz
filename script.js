@@ -138,7 +138,7 @@ const translations = {
         'faq.q2': 'Bis wann müssen wir zu oder absagen ?',
         'faq.a2': 'Bitte sagt uns bis spätestens Ende Februar ab oder zu. Wenn wir bis dahin keine Zusage erhalten, gehen wir davon aus, dass ihr leider nicht kommen könnt.',
         'faq.q3': 'Fotos von der Hochzeit ?',
-        'faq.a3': 'Ein Fotograf wird die wichtigsten Momente des Tages festhalten. Die Fotos werden nach der Hochzeit auf dieser Website zu sehen sein. Teilt gerne schon während oder nach der Feier alle eure Handyfotos über eine gemeinsamen Link mit uns. Den QR-Code dazu findet ihr auf Tischkarten bei der Feier.',
+        'faq.a3': 'Ein Fotograf wird die wichtigsten Momente des Tages festhalten. Die Fotos werden nach der Hochzeit auf dieser Website zu sehen sein.<br><br>Teilt gerne schon während oder nach der Feier alle eure Handyfotos über eine gemeinsamen Link mit uns. Den QR-Code dazu findet ihr auf Tischkarten bei der Feier.',
         'faq.q4': 'Übernachtungsmöglichkeit',
         'faq.a4': 'Falls ihr Übernachtungsmöglichkeiten benötigt, haben wir eine kleine Liste mit verschiedenen Hotels rausgesucht. Wir freuen uns über eure Rückmeldung.',
         'faq.q5': 'Gibt es Parkmöglichkeiten?',
