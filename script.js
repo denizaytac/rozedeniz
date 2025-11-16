@@ -282,18 +282,6 @@ const translations = {
 // Current language
 let currentLang = 'de';
 
-// Get language from URL parameter
-function getLanguageFromURL() {
-    const urlParams = new URLSearchParams(window.location.search);
-    const langParam = urlParams.get('lang');
-
-    // Validate language parameter
-    if (langParam && translations[langParam]) {
-        return langParam;
-    }
-    return null;
-}
-
 // Initialize
 document.addEventListener('DOMContentLoaded', function() {
     // Set up language switcher
@@ -310,17 +298,14 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Determine language: URL parameter takes priority over localStorage
-    const urlLang = getLanguageFromURL();
+    // Load saved language or default
     const savedLang = localStorage.getItem('preferredLanguage') || 'de';
-    const selectedLang = urlLang || savedLang;
-
-    switchLanguage(selectedLang);
+    switchLanguage(savedLang);
 
     // Update active button
-    document.querySelector(`[data-lang="${selectedLang}"]`).classList.add('active');
+    document.querySelector(`[data-lang="${savedLang}"]`).classList.add('active');
     document.querySelectorAll('.lang-btn').forEach(btn => {
-        if (btn.getAttribute('data-lang') !== selectedLang) {
+        if (btn.getAttribute('data-lang') !== savedLang) {
             btn.classList.remove('active');
         }
     });
