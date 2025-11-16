@@ -234,12 +234,22 @@ h1, h2, h3 {
 }
 
 .hero-location {
+    display: flex;
+    align-items: center;
+    gap: 8px;
     font-size: clamp(1rem, 2.5vw, 1.3rem);
     color: rgba(255, 255, 255, 0.95);
     font-weight: 400;
     letter-spacing: 0.08em;
     font-family: 'Lato', sans-serif;
     text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.hero-location .location-icon {
+    flex-shrink: 0;
+    width: clamp(16px, 2.5vw, 20px);
+    height: clamp(16px, 2.5vw, 20px);
+    filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.3));
 }
 
 /* Calendar Button - Using Glass Standard */
