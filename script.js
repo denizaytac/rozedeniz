@@ -122,7 +122,7 @@ const translations = {
 
         'gallery.title': 'Momente unserer Trauung',
         'rsvp.title': 'Gebt uns Bescheid!',
-        'rsvp.text': 'Wir bitten um eure Rückmeldung bis spätestens Ende Februar 2026. Das hilft uns enorm bei der weiteren Planung.',
+        'rsvp.text': 'Wir freuen uns über eure Rückmeldungen bis spätestens Ende Februar. Gerne per Mail, WhatsApp, Telefon oder Brieftaube.',
         'rsvp.button': 'Zur Zusage',
         'timeline.title': 'Programmablauf',
         'timeline.reception': 'Sektempfang',
