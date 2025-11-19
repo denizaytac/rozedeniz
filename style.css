@@ -795,6 +795,13 @@ html {
     border: 0;
     border-radius: 16px;
     margin-top: 1.5rem;
+    filter: grayscale(100%) contrast(1.2) opacity(0.8);
+    mix-blend-mode: multiply;
+    transition: filter 0.3s ease, opacity 0.3s ease;
+}
+
+.anfahrt-content iframe:hover {
+    filter: grayscale(0%) contrast(1) opacity(1);
 }
 
 /* Navigation Button - Using Glass Standard */
