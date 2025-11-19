@@ -111,11 +111,10 @@ const translations = {
         'countdown.hours': 'Stunden',
         'countdown.minutes': 'Minuten',
         'countdown.seconds': 'Sekunden',
-        'message.title': 'Unsere Einladung',
         'message.content': `
             <p>Liebe Familie, liebe Alle,</p>
             <p>es ist so weit – wir heiraten! Wir freuen uns riesig, diesen besonderen Tag mit euch zu teilen.</p>
-            <p>Deshalb laden wir euch von Herzen ein, mit uns einen wundervollen Tag zu verbringen und gemeinem neue Erinnerungen zu schaffen.</p>
+            <p>Deshalb laden wir euch von Herzen ein, mit uns einen wundervollen Tag zu verbringen und gemeinsame neue Erinnerungen zu schaffen.</p>
             <p>Wir können es kaum erwarten, mit euch anzustoßen und kräftig das Tanzbein zu schwingen!</p>
             <p>In Liebe,<br><span class="signature">Roze & Deniz</span></p>
         `,
@@ -123,7 +122,8 @@ const translations = {
         'gallery.title': 'Momente unserer Trauung',
         'rsvp.title': 'Rückmeldung',
         'rsvp.text': 'Wir freuen uns über eure Rückmeldungen bis spätestens Ende Februar. Gerne per Mail, WhatsApp, Telefon oder Brieftaube.',
-        'rsvp.button': 'Zur Zusage',
+        'rsvp.button': 'Per Mail',
+        'rsvp.whatsapp': 'Per WhatsApp',
         'timeline.title': 'Programmablauf',
         'timeline.reception': 'Sektempfang',
         'timeline.placeholder': 'Informationen folgen',
@@ -169,11 +169,10 @@ const translations = {
         'countdown.hours': 'Saat',
         'countdown.minutes': 'Dakika',
         'countdown.seconds': 'Saniye',
-        'message.title': 'Davetimiz',
         'message.content': `
-            <p>Sevgili Ailemiz, sevgili Herkes,</p>
-            <p>O gün geldi çattı – evleniyoruz! Bu özel günü sizlerle paylaşmaktan büyük mutluluk duyuyoruz.</p>
-            <p>Bu yüzden sizleri, bizimle harika bir gün geçirmeye ve birlikte yeni anılar yaratmaya yürekten davet ediyoruz.</p>
+            <p>Sevgili Ailemiz ve sevgili Dostlarimiz,</p>
+            <p>O gün geldi çattı – evleniyoruz! Bu özel günü sizlerle paylaşacagimiz için büyük mutluluk duyuyoruz.</p>
+            <p>Bu mutlu günümüzde sizleri, bizimle harika bir gün geçirmeye ve birlikte yeni anılar biriktirmeye yürekten davet ediyoruz.</p>
             <p>Sizlerle kadeh kaldırmak ve doyasıya dans etmek için sabırsızlanıyoruz!</p>
             <p>Sevgiyle,<br><span class="signature">Roze & Deniz</span></p>
         `,
@@ -181,7 +180,8 @@ const translations = {
         'gallery.title': 'Nikahımızdan Anlar',
         'rsvp.title': 'Bize Haber Verin!',
         'rsvp.text': 'Lütfen en geç Şubat 2026 sonuna kadar geri bildiriminizi bekliyoruz. Bu, planlamada bize çok yardımcı oluyor.',
-        'rsvp.button': 'Onay İçin',
+        'rsvp.button': 'E-Posta Üzerinden',
+        'rsvp.whatsapp': 'WhatsApp Üzerinden',
         'timeline.title': 'Program Akışı',
         'timeline.reception': 'Şampanya İkramı',
         'timeline.placeholder': 'Bilgiler takip edecek',
@@ -227,7 +227,6 @@ const translations = {
         'countdown.hours': 'Sehat',
         'countdown.minutes': 'Deqîqe',
         'countdown.seconds': 'Sanîye',
-        'message.title': 'Daweta Ma',
         'message.content': `
             <p>Keyeyo delal, her kesê delal,</p>
             <p>A roje ameye – ma zewejîyene! Ma zaf şa bîme ke na roje xusûsî bi şima ra parvaz bikerîme.</p>
@@ -239,7 +238,8 @@ const translations = {
         'gallery.title': 'Momente ji Zewaca Ma',
         'rsvp.title': 'Ma Rê Haber Bidê!',
         'rsvp.text': 'Keremê bike heta Şibatê 2026 peyêne ma rê cewab bidê. Na ma rê zaf pela kenena.',
-        'rsvp.button': 'Qayîlkerdişî Rê',
+        'rsvp.button': 'E-Postayî Ra',
+        'rsvp.whatsapp': 'WhatsApp Ra',
         'timeline.title': 'Programa Rojê',
         'timeline.reception': 'Pêşwazîya Şampanya',
         'timeline.placeholder': 'Zanîyayîş ardê na',
