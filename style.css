@@ -962,3 +962,20 @@ html {
     border-radius: 16px; /* Weichere Kanten */
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
 }
+
+/* ============================================
+   SCROLL REVEAL ANIMATION
+   ============================================ */
+
+/* Initial state - hidden */
+.fade-element {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease-out;
+}
+
+/* Visible state - revealed */
+.fade-element.visible {
+    opacity: 1;
+    transform: translateY(0);
+}

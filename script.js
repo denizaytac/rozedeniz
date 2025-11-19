@@ -415,3 +415,37 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         }
     });
 });
+
+// Scroll Reveal Animation - IntersectionObserver
+function initScrollReveal() {
+    // Create IntersectionObserver with 10% threshold
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            // Add 'visible' class when element enters viewport
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                // Optional: stop observing after element becomes visible
+                // observer.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+
+    // Select all elements to observe
+    const elementsToObserve = document.querySelectorAll('.timeline-item, .faq-item, .section-title');
+
+    // Add fade-element class and observe each element
+    elementsToObserve.forEach(element => {
+        element.classList.add('fade-element');
+        observer.observe(element);
+    });
+}
+
+// Initialize Scroll Reveal on DOM load
+document.addEventListener('DOMContentLoaded', function() {
+    initScrollReveal();
+});
