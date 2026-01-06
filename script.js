@@ -104,6 +104,7 @@ updateCountdown();
 // Translation data
 const translations = {
     de: {
+        'hero.date': 'Samstag, 23.05.2026',
         'hero.location': 'Rohrmeisterei, Schwerte',
         'hero.addToCalendar': 'Zum Kalender hinzufügen',
         'countdown.title': 'Countdown bis zur Hochzeit',
@@ -162,6 +163,7 @@ const translations = {
         'accommodation.taxi.intro': 'Für eure Fahrt zur Location oder zurück zum Hotel stehen euch folgende Taxi-Dienste zur Verfügung:'
     },
     tr: {
+        'hero.date': 'Cumartesi, 23.05.2026',
         'hero.location': 'Rohrmeisterei, Schwerte',
         'hero.addToCalendar': 'Takvime Ekle',
         'countdown.title': 'Düğüne Geri Sayım',
@@ -170,8 +172,8 @@ const translations = {
         'countdown.minutes': 'Dakika',
         'countdown.seconds': 'Saniye',
         'message.content': `
-            <p>Sevgili Ailemiz ve sevgili Dostlarimiz,</p>
-            <p>O gün geldi çattı – evleniyoruz! Bu özel günü sizlerle paylaşacagimiz için büyük mutluluk duyuyoruz.</p>
+            <p>Sevgili Ailemiz ve Dostlarımız,</p>
+            <p>O gün geldi çattı – evleniyoruz! Bu özel günü sizlerle paylaşacağımız için büyük mutluluk duyuyoruz.</p>
             <p>Bu mutlu günümüzde sizleri, bizimle harika bir gün geçirmeye ve birlikte yeni anılar biriktirmeye yürekten davet ediyoruz.</p>
             <p>Sizlerle kadeh kaldırmak ve doyasıya dans etmek için sabırsızlanıyoruz!</p>
             <p>Sevgiyle,<br><span class="signature">Roze & Deniz</span></p>
@@ -179,7 +181,7 @@ const translations = {
 
         'gallery.title': 'Nikahımızdan Anlar',
         'rsvp.title': 'Bize Haber Verin!',
-        'rsvp.text': 'Lütfen en geç Şubat 2026 sonuna kadar geri bildiriminizi bekliyoruz. Bu, planlamada bize çok yardımcı oluyor.',
+        'rsvp.text': 'En geç Şubat sonuna kadar geri bildirimlerinizi bekliyoruz. E-posta, WhatsApp, telefon veya posta güvercini ile ulaşabilirsiniz.',
         'rsvp.button': 'E-Posta Üzerinden',
         'rsvp.whatsapp': 'WhatsApp Üzerinden',
         'timeline.title': 'Program Akışı',
