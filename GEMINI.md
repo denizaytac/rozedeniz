@@ -1,8 +1,8 @@
 ## Project Overview
 
-This project is a modern, tri-lingual wedding website for "Roze & Deniz". It is a static website built with vanilla HTML, CSS, and JavaScript, with no external dependencies or build process. The design is elegant and minimalist, inspired by "Sex and the City".
+This project is a modern, bilingual wedding website for "Roze & Deniz". It is a static website built with vanilla HTML, CSS, and JavaScript, with no external dependencies or build process. The design is elegant and minimalist, inspired by "Sex and the City".
 
-The website is available in German, Turkish, and Zazaki. It features a hero section with a photo, a personal message, a timeline of the wedding day, and an FAQ section.
+The website is available in German and Turkish. It features a hero section with a photo, a personal message, a timeline of the wedding day, and an FAQ section.
 
 ## Key Files
 

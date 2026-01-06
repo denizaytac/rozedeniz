@@ -1,10 +1,10 @@
 # Roze & Deniz - Hochzeitswebseite
 
-Eine moderne, dreisprachige Hochzeitswebseite im "Sex and the City"-Stil.
+Eine moderne, zweisprachige Hochzeitswebseite im "Sex and the City"-Stil.
 
 ## Features
 
-- **Dreisprachig**: Deutsch, Türkisch und Zazaki
+- **Zweisprachig**: Deutsch und Türkisch
 - **Responsive Design**: Funktioniert auf allen Geräten
 - **Modernes Design**: Eleganter, minimalistischer Stil ohne Kitsch
 - **Sektionen**:
