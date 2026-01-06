@@ -1,0 +1,7 @@
+# Language-specific URLs redirect to index.html
+/de     /index.html   200
+/tr     /index.html   200
+/za     /index.html   200
+
+# Redirect root to German by default (optional - comment out if not needed)
+# /       /de           302
