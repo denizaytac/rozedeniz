@@ -282,6 +282,27 @@ const translations = {
 // Current language
 let currentLang = 'de';
 
+// Available languages
+const availableLanguages = ['de', 'tr', 'za'];
+
+// Get language from URL path (e.g., /de, /tr, /za)
+function getLanguageFromURL() {
+    const path = window.location.pathname;
+    const langMatch = path.match(/^\/(de|tr|za)\/?$/i);
+    if (langMatch) {
+        return langMatch[1].toLowerCase();
+    }
+    return null;
+}
+
+// Update URL to reflect current language
+function updateURL(lang) {
+    const newPath = '/' + lang;
+    if (window.location.pathname !== newPath) {
+        window.history.replaceState({ lang: lang }, '', newPath);
+    }
+}
+
 // Initialize
 document.addEventListener('DOMContentLoaded', function() {
     // Set up language switcher
@@ -298,14 +319,17 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Load saved language or default
-    const savedLang = localStorage.getItem('preferredLanguage') || 'de';
-    switchLanguage(savedLang);
+    // Priority: URL > localStorage > default (de)
+    const urlLang = getLanguageFromURL();
+    const savedLang = localStorage.getItem('preferredLanguage');
+    const initialLang = urlLang || savedLang || 'de';
+
+    switchLanguage(initialLang);
 
     // Update active button
-    document.querySelector(`[data-lang="${savedLang}"]`).classList.add('active');
+    document.querySelector(`[data-lang="${initialLang}"]`).classList.add('active');
     document.querySelectorAll('.lang-btn').forEach(btn => {
-        if (btn.getAttribute('data-lang') !== savedLang) {
+        if (btn.getAttribute('data-lang') !== initialLang) {
             btn.classList.remove('active');
         }
     });
@@ -318,6 +342,9 @@ document.addEventListener('DOMContentLoaded', function() {
 function switchLanguage(lang) {
     currentLang = lang;
     localStorage.setItem('preferredLanguage', lang);
+
+    // Update URL to reflect current language
+    updateURL(lang);
 
     // Update all translatable elements
     const elements = document.querySelectorAll('[data-i18n]');
