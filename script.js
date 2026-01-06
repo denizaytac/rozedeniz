@@ -218,64 +218,6 @@ const translations = {
         'accommodation.phone': 'Telefon:',
         'accommodation.taxi.title': 'Taksi Hizmetleri',
         'accommodation.taxi.intro': 'Mekana veya otele dönüş için aşağıdaki taksi hizmetlerinden yararlanabilirsiniz:'
-    },
-    za: {
-        'hero.location': 'Rohrmeisterei, Schwerte',
-        'hero.addToCalendar': 'Bicî Takvîmî',
-        'countdown.title': 'Hejmara Rojan Heta Dawetê',
-        'countdown.days': 'Roj',
-        'countdown.hours': 'Sehat',
-        'countdown.minutes': 'Deqîqe',
-        'countdown.seconds': 'Sanîye',
-        'message.content': `
-            <p>Keyeyo delal, her kesê delal,</p>
-            <p>A roje ameye – ma zewejîyene! Ma zaf şa bîme ke na roje xusûsî bi şima ra parvaz bikerîme.</p>
-            <p>Coka ma şima rê bi dil û can dawet kenîme ke bi ma ra rojeke rind derbaz bikerê û bi hev ra vîrardişê neweyî virazê.</p>
-            <p>Ma nêeşkenîme sabir bikerîme ke bi şima ra qedeh hewadayîme û govend bikerîme!</p>
-            <p>Bi heznayîş,<br><span class="signature">Roze û Deniz</span></p>
-        `,
-
-        'gallery.title': 'Momente ji Zewaca Ma',
-        'rsvp.title': 'Ma Rê Haber Bidê!',
-        'rsvp.text': 'Keremê bike heta Şibatê 2026 peyêne ma rê cewab bidê. Na ma rê zaf pela kenena.',
-        'rsvp.button': 'E-Postayî Ra',
-        'rsvp.whatsapp': 'WhatsApp Ra',
-        'timeline.title': 'Programa Rojê',
-        'timeline.reception': 'Pêşwazîya Şampanya',
-        'timeline.placeholder': 'Zanîyayîş ardê na',
-        'timeline.ceremony': 'Zewicnayene',
-        'timeline.dinner': 'Şîyanê Şewî',
-        'timeline.cake': 'Birnayena Kekê',
-        'timeline.party': 'Şadî û Gopnayene',
-        'timeline.end': 'Stirana Peyêne',
-        'faq.title': 'Persê ke Pir Persîyenê',
-        'faq.q1': 'Kodêk libas esto?',
-        'faq.a1': 'Xo rindkerdene ke şima xo rinde hîs kenê! Tabî ma şa bîme ke şima xo kêmê rinde bikerê, feqet cayê girîng ey o ke ma bi hev ra rojeke rind derbaz bikerîme.',
-        'faq.q2': 'Heta key ma gereke bêje ke ma yenîme yan nêyenîme?',
-        'faq.a2': 'Keremê bike heta peyê Şibatî ma rê bêje ke şima yenîme yan nêyenîme. Eke heta o wext ma cewabêk nêgîrîme, ma wazenîme ke şima nêeşkenê bêrê.',
-        'faq.q3': 'Fotoyê Zewacî?',
-        'faq.a3': 'Fotografêk wextanê girîng ê rojê kodkerê. Fotoyî badê zewacî ser ena web-sîte de asenê. Şima eşkenê wextê şadîye de yan zi badê şadîye heme fotoyanê xo yê telefonî bi linkêka hevpar bi ma ra parvaz bikerê. QR-kodê ey ser kartanê masayî yê şadîye de yo.',
-        'faq.q4': 'Cayê Werzayîşî',
-        'faq.a4': 'Eke şima cayê werzayîşî wazenê, ma lîsteyêka qic bi hotelanê cîya-cîya amade kerda. Keremê bike ma rê bêje.',
-        'faq.q5': 'Cayê parkî esto?',
-        'faq.a5': 'Heya, ver lokasyonî de cayê parkî estê. Nê cayê şima rê xora rezervkerdeyê û perekerdeyê.',
-        'faq.q6': 'Ez eşkena kesêk bi xo ra biarê?',
-        'faq.a6': 'Ma şima rê zaf şa bîme! Ma tenya hejmarêk qic ê mîhmanan rê cayê ma esto, coka ma rê kesê bînî rê caye çin o. Ez hêvî kena ke şima na fehm kenê û eşkenê şewê bi ma ra keyf bikerê',
-        'anfahrt.title': 'Raya Ameyîşî',
-        'anfahrt.address': 'Rohrmeisterei Schwerte<br>Ruhrstraße 20, 58239 Schwerte',
-        'anfahrt.navigate': 'Navîgasyonê Dest Pê Bike',
-        'accommodation.title': 'Werzayîş û Taksî',
-        'accommodation.hotels.title': 'Tavsîyeyê Hotelî',
-        'accommodation.hotels.intro': 'Qerarê şima rê ma ney hotelê nêzdîyan tavsîye kenîme:',
-        'accommodation.hotel1.name': 'Hotel Reichshof',
-        'accommodation.hotel1.address': 'Bahnhofstr. 32, 58239 Schwerte',
-        'accommodation.hotel2.name': 'Breer\'s Hotel',
-        'accommodation.hotel2.address': 'Reichshofstr. 104, 58239 Schwerte',
-        'accommodation.hotel3.name': 'Hotel Menzebach - Olympia',
-        'accommodation.hotel3.address': 'Ostenstr. 23, 58239 Schwerte',
-        'accommodation.phone': 'Telefon:',
-        'accommodation.taxi.title': 'Xizmetê Taksîyan',
-        'accommodation.taxi.intro': 'Raya şima ya rê lokasyon yan zi hotêl rê ney xizmetê taksîyan şima rê amadeyî:'
     }
 };
 
