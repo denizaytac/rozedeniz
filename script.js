@@ -173,8 +173,8 @@ const translations = {
         'countdown.seconds': 'Saniye',
         'message.content': `
             <p>Sevgili Ailemiz ve Dostlarımız,</p>
-            <p>O gün geldi çattı – evleniyoruz! Bu özel günü sizlerle paylaşacağımız için büyük mutluluk duyuyoruz.</p>
-            <p>Bu mutlu günümüzde sizleri, bizimle harika bir gün geçirmeye ve birlikte yeni anılar biriktirmeye yürekten davet ediyoruz.</p>
+            <p>O gün geldi çattı – evleniyoruz! Bu özel günü sizlerle paylaşacağımız için çok heyecanlıyız.</p>
+            <p>Sizleri, birlikte unutulmaz anılar biriktireceğimiz bu güzel güne yürekten davet ediyoruz.</p>
             <p>Sizlerle kadeh kaldırmak ve doyasıya dans etmek için sabırsızlanıyoruz!</p>
             <p>Sevgiyle,<br><span class="signature">Roze & Deniz</span></p>
         `,
@@ -196,15 +196,15 @@ const translations = {
         'faq.q1': 'Bir kıyafet kodu var mı?',
         'faq.a1': 'Kendinizi rahat hissettiğiniz şekilde gelin! Biraz şık giyinirseniz tabii ki mutlu oluruz, ama en önemlisi birlikte harika bir gün geçirmek.',
         'faq.q2': 'Ne zamana kadar katılıp katılamayacağımızı bildirmeliyiz?',
-        'faq.a2': 'Lütfen en geç Şubat ayı sonuna kadar bize katılıp katılamayacağınızı bildirin. Bu tarihe kadar bir onay alamazsak, maalesef gelemeyeceğinizi varsayacağız.',
+        'faq.a2': 'Lütfen en geç Şubat ayı sonuna kadar bize katılıp katılamayacağınızı bildirin. Bu tarihe kadar haber alamazsak, maalesef gelemeyeceğinizi varsayacağız.',
         'faq.q3': 'Düğün fotoğrafları?',
-        'faq.a3': 'Bir fotoğrafçı günün en önemli anlarını ölümsüzleştirecek. Fotoğraflar düğünden sonra bu web sitesinde yayınlanacaktır. Kutlama sırasında veya sonrasında tüm cep telefonu fotoğraflarınızı ortak bir bağlantı üzerinden bizimle paylaşmaktan çekinmeyin. QR kodunu kutlamadaki masa kartlarında bulabilirsiniz.',
+        'faq.a3': 'Bir fotoğrafçı günün en önemli anlarını ölümsüzleştirecek. Fotoğraflar düğünden sonra bu web sitesinde paylaşılacak. Kutlama sırasında veya sonrasında fotoğraflarınızı ortak bir link üzerinden bizimle paylaşabilirsiniz. QR kodunu kutlamadaki masa kartlarında bulabilirsiniz.',
         'faq.q4': 'Konaklama imkanı',
-        'faq.a4': '<strong>ibis Hotel Dortmund City</strong> otelinde sizin için oda kontenjani ayırdık.<br><br>Çift kişilik oda: <strong>86€/gece</strong> (= kişi başı 43€)<br>İsteğe bağlı: Kahvaltı büfesi +18€/kişi<br>Otopark: Ücretsiz (kapalı otopark)<br><br>Rezervasyon: <a href="mailto:H3285@accor.com">H3285@accor.com</a><br>Anahtar kelime: <strong>„Hochzeit Deniz & Rozê"</strong><br>Son rezervasyon: 31.03.2026<br>Ücretsiz iptal: 20.05.2026\'ya kadar',
+        'faq.a4': '<strong>ibis Hotel Dortmund City</strong> otelinde sizin için oda kontenjanı ayırdık.<br><br>Çift kişilik oda: <strong>86€/gece</strong> (= kişi başı 43€)<br>İsteğe bağlı: Kahvaltı büfesi +18€/kişi<br>Otopark: Ücretsiz (kapalı otopark)<br><br>Rezervasyon: <a href="mailto:H3285@accor.com">H3285@accor.com</a><br>Anahtar kelime: <strong>„Hochzeit Deniz & Rozê"</strong><br>Son rezervasyon: 31.03.2026<br>Ücretsiz iptal: 20.05.2026\'ya kadar',
         'faq.q5': 'Otopark imkanı var mı?',
-        'faq.a5': 'Evet, mekanın önünde otopark bulunmaktadır. Bunlar sizin için zaten rezerve edilmiş ve ödenmiştir.',
+        'faq.a5': 'Evet, mekanın önünde otopark var. Park alanları sizin için zaten rezerve edilmiş ve ödenmiştir.',
         'faq.q6': 'Birini yanımda getirebilir miyim?',
-        'faq.a6': 'Sizi ağırlamaktan mutluluk duyarız! Maalesef sınırlı sayıda misafir yerimiz var, bu nedenle ek misafirler için kapasitemiz yok. Umarım bunu anlar ve yine de akşamın tadını bizimle çıkarabilirsiniz.',
+        'faq.a6': 'Sizleri aramızda görmekten çok mutlu olacağız! Ancak maalesef sınırlı sayıda yerimiz var, bu nedenle ek misafirler için kapasitemiz yok. Umarız anlayışla karşılarsınız ve yine de akşamın tadını bizimle çıkarırsınız.',
         'anfahrt.title': 'Yol Tarifi',
         'anfahrt.address': 'Rohrmeisterei Schwerte<br>Ruhrstraße 20, 58239 Schwerte',
         'anfahrt.navigate': 'Navigasyonu Başlat',
