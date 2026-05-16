@@ -505,14 +505,15 @@ section {
     letter-spacing: 0.01em;
 }
 
-/* Placeholder-Styling für "Informationen folgen" */
-.timeline-item.placeholder .timeline-event {
-    color: #888888;
+/* Gästebuch-Notiz unter der Timeline */
+.timeline-note {
+    max-width: 480px;
+    margin: 32px auto 0;
+    text-align: center;
     font-style: italic;
-}
-
-.timeline-item.placeholder .timeline-time {
+    font-size: 0.95rem;
     color: #888888;
+    line-height: 1.5;
 }
 
 /* FAQ Section */
