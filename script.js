@@ -104,6 +104,7 @@ updateCountdown();
 // Translation data
 const translations = {
     de: {
+        'hero.eyebrow': 'Es ist soweit.',
         'hero.date': 'Samstag, 23.05.2026',
         'hero.location': 'Rohrmeisterei, Schwerte',
         'hero.addToCalendar': 'Zum Kalender hinzufügen',
@@ -114,17 +115,13 @@ const translations = {
         'countdown.seconds': 'Sekunden',
         'message.content': `
             <p>Liebe Familie, liebe Alle,</p>
-            <p>es ist so weit – wir heiraten! Wir freuen uns riesig, diesen besonderen Tag mit euch zu teilen.</p>
+            <p>in wenigen Tagen ist es soweit – wir heiraten! Wir freuen uns riesig, diesen besonderen Tag mit euch zu teilen.</p>
             <p>Deshalb laden wir euch von Herzen ein, mit uns einen wundervollen Tag zu verbringen und gemeinsame neue Erinnerungen zu schaffen.</p>
             <p>Wir können es kaum erwarten, mit euch anzustoßen und kräftig das Tanzbein zu schwingen!</p>
             <p>In Liebe,<br><span class="signature">Roze & Deniz</span></p>
         `,
 
         'gallery.title': 'Momente unserer Trauung',
-        'rsvp.title': 'Rückmeldung',
-        'rsvp.text': 'Wir freuen uns über eure Rückmeldungen bis spätestens Ende Februar. Gerne per Mail, WhatsApp, Telefon oder Brieftaube.',
-        'rsvp.button': 'Per Mail',
-        'rsvp.whatsapp': 'Per WhatsApp',
         'timeline.title': 'Unser gemeinsamer Abend',
         'timeline.reception': 'Sektempfang',
         'timeline.einzug': 'Einzug · Davul Zurna · Halay',
@@ -136,12 +133,10 @@ const translations = {
         'faq.title': 'Häufige Fragen',
         'faq.q1': 'Gibt es einen Dresscode?',
         'faq.a1': 'Kommt so, wie ihr euch wohlfühlt! Wir freuen uns natürlich, wenn ihr euch ein bisschen schick macht, aber das Wichtigste ist, dass wir gemeinsam einen wundervollen Tag verbringen.',
-        'faq.q2': 'Bis wann müssen wir zu oder absagen ?',
-        'faq.a2': 'Bitte sagt uns bis spätestens Ende Februar ab oder zu. Wenn wir bis dahin keine Zusage erhalten, gehen wir davon aus, dass ihr leider nicht kommen könnt.',
-        'faq.q3': 'Fotos von der Hochzeit ?',
+        'faq.q3': 'Fotos von der Hochzeit?',
         'faq.a3': 'Ein Fotograf wird die wichtigsten Momente des Tages festhalten. Die Fotos werden nach der Hochzeit auf dieser Website zu sehen sein.<br><br>Teilt gerne schon während oder nach der Feier alle eure Handyfotos über eine gemeinsamen Link mit uns. Den QR-Code dazu findet ihr auf Tischkarten bei der Feier.',
-        'faq.q4': 'Übernachtungsmöglichkeit',
-        'faq.a4': 'Wir haben ein Zimmerkontingent im <strong>ibis Hotel Dortmund City</strong> für euch reserviert.<br><br>Doppelzimmer: <strong>86€/Nacht</strong> (= 43€ pro Person)<br>Optional: Frühstücksbuffet +18€ pro Person<br>Parkplatz: Kostenfrei (Tiefgarage)<br><br>Buchung per E-Mail an <a href="mailto:H3285@accor.com">H3285@accor.com</a><br>Stichwort: <strong>„Hochzeit Deniz & Rozê"</strong><br>Buchbar bis: 31.03.2026<br>Kostenlose Stornierung bis 20.05.2026',
+        'faq.q4': 'Wo übernachtet ihr & gemeinsames Frühstück?',
+        'faq.a4': 'Wir übernachten im <strong>ibis Hotel Dortmund City</strong>. Am Sonntagmorgen suchen wir uns spontan in Dortmund einen Ort zum Frühstücken — wer Lust hat, gemeinsam mit uns den Morgen ausklingen zu lassen, bevor es zurückgeht, kann sich gern vor Ort bei uns melden. Wir sprechen uns dann kurzfristig ab.',
         'faq.q5': 'Gibt es Parkmöglichkeiten?',
         'faq.a5': 'Ja, es gibt Parkplätze direkt vor der Location. Diese sind für euch bereits reserviert und bezahlt.',
         'faq.q6': 'Darf ich jemanden mitbringen?',
@@ -163,6 +158,7 @@ const translations = {
         'accommodation.taxi.intro': 'Für eure Fahrt zur Location oder zurück zum Hotel stehen euch folgende Taxi-Dienste zur Verfügung:'
     },
     tr: {
+        'hero.eyebrow': 'Vakit geldi.',
         'hero.date': 'Cumartesi, 23.05.2026',
         'hero.location': 'Rohrmeisterei, Schwerte',
         'hero.addToCalendar': 'Takvime Ekle',
@@ -173,17 +169,13 @@ const translations = {
         'countdown.seconds': 'Saniye',
         'message.content': `
             <p>Sevgili Ailemiz ve Dostlarımız,</p>
-            <p>O gün geldi çattı – evleniyoruz! Bu özel günü sizlerle paylaşacağımız için çok heyecanlıyız.</p>
+            <p>Birkaç gün sonra o an gelecek – evleniyoruz! Bu özel günü sizlerle paylaşacağımız için çok heyecanlıyız.</p>
             <p>Sizleri, birlikte unutulmaz anılar biriktireceğimiz bu güzel güne yürekten davet ediyoruz.</p>
             <p>Sizlerle kadeh kaldırmak ve doyasıya dans etmek için sabırsızlanıyoruz!</p>
             <p>Sevgiyle,<br><span class="signature">Roze & Deniz</span></p>
         `,
 
         'gallery.title': 'Nikahımızdan Anlar',
-        'rsvp.title': 'Bize Haber Verin!',
-        'rsvp.text': 'En geç Şubat sonuna kadar geri bildirimlerinizi bekliyoruz. E-posta, WhatsApp, telefon veya posta güvercini ile ulaşabilirsiniz.',
-        'rsvp.button': 'E-Posta Üzerinden',
-        'rsvp.whatsapp': 'WhatsApp Üzerinden',
         'timeline.title': 'Birlikte Geçireceğimiz Akşam',
         'timeline.reception': 'Şampanya İkramı',
         'timeline.einzug': 'Giriş · Davul Zurna · Halay',
@@ -195,12 +187,10 @@ const translations = {
         'faq.title': 'Sıkça Sorulan Sorular',
         'faq.q1': 'Bir kıyafet kodu var mı?',
         'faq.a1': 'Kendinizi rahat hissettiğiniz şekilde gelin! Biraz şık giyinirseniz tabii ki mutlu oluruz, ama en önemlisi birlikte harika bir gün geçirmek.',
-        'faq.q2': 'Ne zamana kadar katılıp katılamayacağımızı bildirmeliyiz?',
-        'faq.a2': 'Lütfen en geç Şubat ayı sonuna kadar bize katılıp katılamayacağınızı bildirin. Bu tarihe kadar haber alamazsak, maalesef gelemeyeceğinizi varsayacağız.',
         'faq.q3': 'Düğün fotoğrafları?',
         'faq.a3': 'Bir fotoğrafçı günün en önemli anlarını ölümsüzleştirecek. Fotoğraflar düğünden sonra bu web sitesinde paylaşılacak. Kutlama sırasında veya sonrasında fotoğraflarınızı ortak bir link üzerinden bizimle paylaşabilirsiniz. QR kodunu kutlamadaki masa kartlarında bulabilirsiniz.',
-        'faq.q4': 'Konaklama imkanı',
-        'faq.a4': '<strong>ibis Hotel Dortmund City</strong> otelinde sizin için oda kontenjanı ayırdık.<br><br>Çift kişilik oda: <strong>86€/gece</strong> (= kişi başı 43€)<br>İsteğe bağlı: Kahvaltı büfesi +18€/kişi<br>Otopark: Ücretsiz (kapalı otopark)<br><br>Rezervasyon: <a href="mailto:H3285@accor.com">H3285@accor.com</a><br>Anahtar kelime: <strong>„Hochzeit Deniz & Rozê"</strong><br>Son rezervasyon: 31.03.2026<br>Ücretsiz iptal: 20.05.2026\'ya kadar',
+        'faq.q4': 'Nerede kalıyorsunuz ve Pazar kahvaltısı?',
+        'faq.a4': 'Biz <strong>ibis Hotel Dortmund City</strong>\'de kalıyoruz. Pazar sabahı Dortmund\'da spontan bir kahvaltı yeri arayacağız — geri dönüşten önce bizimle birlikte sabahı tamamlamak isteyenler, sabah otelde bize haber verebilir. Kısa süre içinde birlikte plan yaparız.',
         'faq.q5': 'Otopark imkanı var mı?',
         'faq.a5': 'Evet, mekanın önünde otopark var. Park alanları sizin için zaten rezerve edilmiş ve ödenmiştir.',
         'faq.q6': 'Birini yanımda getirebilir miyim?',
